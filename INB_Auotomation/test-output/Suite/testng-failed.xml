@@ -9,9 +9,9 @@
     <classes>
       <class name="com.INB.tests.TC_LoginRetailUser">
         <methods>
-          <include name="newTest" invocation-numbers="0"/>
+          <include name="newTest" invocation-numbers="0 1 2"/>
           <include name="tearDown"/>
-          <include name="LoginLogoutTest" invocation-numbers="0"/>
+          <include name="LoginLogoutTest" invocation-numbers="0 1"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.INB.tests.TC_LoginRetailUser -->

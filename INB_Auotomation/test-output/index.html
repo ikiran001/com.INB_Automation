@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">5 methods, 5 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,12 +104,27 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="LoginLogoutTest(CIF1, Asdf@123)">LoginLogoutTest(CIF1, Asdf@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="LoginLogoutTest({password=Asdf@123, testname=LoginLogoutTest, execute=yes, username=CIF1})">LoginLogoutTest({password=Asdf@123, testname=LoginLogoutTest, execute=yes, username=CIF1})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="newTest(CIF1, Asdf@123)">newTest(CIF1, Asdf@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="LoginLogoutTest({password=Asdf@333, testname=LoginLogoutTest, execute=yes, username=CIF4})">LoginLogoutTest({password=Asdf@333, testname=LoginLogoutTest, execute=yes, username=CIF4})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})">newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="newTest({password=Asdfg@123, testname=newTest, execute=yes, username=CIF1})">newTest({password=Asdfg@123, testname=newTest, execute=yes, username=CIF1})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})">newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -132,17 +147,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginLogoutTest(CIF1, Asdf@123)">
-                  </a> <!-- LoginLogoutTest(CIF1, Asdf@123) -->
+                  <a name="LoginLogoutTest({password=Asdf@123, testname=LoginLogoutTest, execute=yes, username=CIF1})">
+                  </a> <!-- LoginLogoutTest({password=Asdf@123, testname=LoginLogoutTest, execute=yes, username=CIF1}) -->
                   <span class="method-name">LoginLogoutTest</span>
-                  <span class="parameters">(CIF1, Asdf@123)</span>
+                  <span class="parameters">({password=Asdf@123, testname=LoginLogoutTest, execute=yes, username=CIF1})</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3] (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:21)
 	at com.INB.pageObjects.BasePage.click(BasePage.java:14)
 	at com.INB.pageObjects.RetailHomePage.clickOnLogout(RetailHomePage.java:13)
-	at com.INB.tests.TC_LoginRetailUser.LoginLogoutTest(TC_LoginRetailUser.java:19)
+	at com.INB.tests.TC_LoginRetailUser.LoginLogoutTest(TC_LoginRetailUser.java:21)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
@@ -158,7 +173,7 @@ Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, tim
 System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 105.0.5195.127, webStorageEnabled: true}
-Session ID: 2986ae2ac40bc9d1e122819b854ed45e
+Session ID: 699d99405070e881c30026c450301023
 *** Element info: {Using=xpath, value=//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
@@ -184,17 +199,17 @@ Session ID: 2986ae2ac40bc9d1e122819b854ed45e
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="newTest(CIF1, Asdf@123)">
-                  </a> <!-- newTest(CIF1, Asdf@123) -->
-                  <span class="method-name">newTest</span>
-                  <span class="parameters">(CIF1, Asdf@123)</span>
+                  <a name="LoginLogoutTest({password=Asdf@333, testname=LoginLogoutTest, execute=yes, username=CIF4})">
+                  </a> <!-- LoginLogoutTest({password=Asdf@333, testname=LoginLogoutTest, execute=yes, username=CIF4}) -->
+                  <span class="method-name">LoginLogoutTest</span>
+                  <span class="parameters">({password=Asdf@333, testname=LoginLogoutTest, execute=yes, username=CIF4})</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3] (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:21)
 	at com.INB.pageObjects.BasePage.click(BasePage.java:14)
 	at com.INB.pageObjects.RetailHomePage.clickOnLogout(RetailHomePage.java:13)
-	at com.INB.tests.TC_LoginRetailUser.newTest(TC_LoginRetailUser.java:33)
+	at com.INB.tests.TC_LoginRetailUser.LoginLogoutTest(TC_LoginRetailUser.java:21)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
@@ -210,7 +225,163 @@ Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, tim
 System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 105.0.5195.127, webStorageEnabled: true}
-Session ID: a6a4f7ae6f0b0f372c8467633bf262fd
+Session ID: 4e6c4a2df611a48209bf752db7b4dab7
+*** Element info: {Using=xpath, value=//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 19 more
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To check whether the user can successfully login and logout)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})">
+                  </a> <!-- newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1}) -->
+                  <span class="method-name">newTest</span>
+                  <span class="parameters">({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:21)
+	at com.INB.pageObjects.BasePage.click(BasePage.java:14)
+	at com.INB.pageObjects.RetailHomePage.clickOnLogout(RetailHomePage.java:13)
+	at com.INB.tests.TC_LoginRetailUser.newTest(TC_LoginRetailUser.java:35)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]&quot;}
+  (Session info: chrome=105.0.5195.127)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 105.0.5195.127, webStorageEnabled: true}
+Session ID: d60d2af5c0fc7d56abae58580dff314a
+*** Element info: {Using=xpath, value=//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 19 more
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To check this testcase executed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="newTest({password=Asdfg@123, testname=newTest, execute=yes, username=CIF1})">
+                  </a> <!-- newTest({password=Asdfg@123, testname=newTest, execute=yes, username=CIF1}) -->
+                  <span class="method-name">newTest</span>
+                  <span class="parameters">({password=Asdfg@123, testname=newTest, execute=yes, username=CIF1})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:21)
+	at com.INB.pageObjects.BasePage.click(BasePage.java:14)
+	at com.INB.pageObjects.RetailHomePage.clickOnLogout(RetailHomePage.java:13)
+	at com.INB.tests.TC_LoginRetailUser.newTest(TC_LoginRetailUser.java:35)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]&quot;}
+  (Session info: chrome=105.0.5195.127)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 105.0.5195.127, webStorageEnabled: true}
+Session ID: 275c6c362d26c4f338984dfd65195339
+*** Element info: {Using=xpath, value=//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 19 more
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To check this testcase executed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})">
+                  </a> <!-- newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1}) -->
+                  <span class="method-name">newTest</span>
+                  <span class="parameters">({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:21)
+	at com.INB.pageObjects.BasePage.click(BasePage.java:14)
+	at com.INB.pageObjects.RetailHomePage.clickOnLogout(RetailHomePage.java:13)
+	at com.INB.tests.TC_LoginRetailUser.newTest(TC_LoginRetailUser.java:35)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]&quot;}
+  (Session info: chrome=105.0.5195.127)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 105.0.5195.127, webStorageEnabled: true}
+Session ID: bb5154937dd1750a872a031db34c5a62
 *** Element info: {Using=xpath, value=//*[@id=&quot;bs-example-navbar-collapse-1&quot;]/ul/li[3]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
@@ -292,20 +463,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'newTest')
+data.setCell(0, 1, 'LoginLogoutTest')
 data.setCell(0, 2, 'com.INB.tests.TC_LoginRetailUser')
-data.setCell(0, 3, 12609);
+data.setCell(0, 3, 14176);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'LoginLogoutTest')
 data.setCell(1, 2, 'com.INB.tests.TC_LoginRetailUser')
-data.setCell(1, 3, 12274);
+data.setCell(1, 3, 13991);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'newTest')
+data.setCell(2, 2, 'com.INB.tests.TC_LoginRetailUser')
+data.setCell(2, 3, 13113);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'newTest')
+data.setCell(3, 2, 'com.INB.tests.TC_LoginRetailUser')
+data.setCell(3, 3, 13038);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'newTest')
+data.setCell(4, 2, 'com.INB.tests.TC_LoginRetailUser')
+data.setCell(4, 3, 12957);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -336,29 +519,71 @@ return data;
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">LoginLogoutTest(CIF1, Asdf@123)</span>
-                <span class="method-start">5373 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">17776 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">18163 ms</span>
+                <span class="method-start">30 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">newTest(CIF1, Asdf@123)</span>
-                <span class="method-start">21408 ms</span>
+                <span class="method-name">LoginLogoutTest({password=Asdf@333, testname=LoginLogoutTest, execute=yes, username=CIF4})</span>
+                <span class="method-start">8519 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginLogoutTest({password=Asdf@123, testname=LoginLogoutTest, execute=yes, username=CIF1})</span>
+                <span class="method-start">8547 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34160 ms</span>
+                <span class="method-start">22661 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">22998 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">23674 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">23675 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})</span>
+                <span class="method-start">33989 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">newTest({password=Asdf@123, testname=newTest, execute=yes, username=CIF1})</span>
+                <span class="method-start">34121 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">47158 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">47357 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">47555 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">newTest({password=Asdfg@123, testname=newTest, execute=yes, username=CIF1})</span>
+                <span class="method-start">51936 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">64991 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

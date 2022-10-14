@@ -11,10 +11,14 @@ import org.testng.ITestContext;
 import com.INB.utils.ExcelUtils;
 
 public class MethodInterceptor implements IMethodInterceptor {
-
+	
+	/*
+	 * this listener class will give you the all the eligible methods(test cases)
+	 * which execuion parameter set it as yes
+	 */
 	public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext context) {
 
-		List<Map<String, String>> list=ExcelUtils.getTestDetails(); // Iterate this list with methods(contains all the testcases)
+		List<Map<String, String>> list=ExcelUtils.getTestDetails("RUNMANAGER"); // Iterate this list with methods(contains all the testcases)
 		List<IMethodInstance> result= new ArrayList<IMethodInstance>();
 		for(int i=0; i<methods.size() ; i++) { // will provide all the test cases or  methods
 			for (int j=0 ; j<list.size(); j++) {  // will provide all the methods saved in list(which is derived from excel sheet)

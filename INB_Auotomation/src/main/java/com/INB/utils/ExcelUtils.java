@@ -18,17 +18,21 @@ public final class ExcelUtils {
 	private ExcelUtils() {
 
 	}
-
 	
-	public static List<Map<String,String>> getTestDetails() {
+	/*
+	 * this method will return all list of map which contains the values from given
+	 * excel sheet as key and value pair
+	 */
+	
+
+	public static List<Map<String,String>> getTestDetails(String sheetName) { 
 		List<Map<String,String>> list=null;
 		FileInputStream fs = null;
-
 
 		try {
 			fs=new FileInputStream(FrameworkConstants.getExcelpath());
 			XSSFWorkbook	workbook = new XSSFWorkbook(fs);
-			String sheetName="RUNMANAGER";
+			
 			XSSFSheet sheet=workbook.getSheet(sheetName);
 
 			list=new ArrayList<Map<String,String>>();
