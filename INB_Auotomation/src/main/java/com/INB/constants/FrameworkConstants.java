@@ -14,10 +14,18 @@ public final class FrameworkConstants {                          // final= not t
 	private static final int    EXPLICITWAIT=10;
 	private static final String EXCELPATH=PATHTORESOURCES+"/excel/testData.xlsx";
 	private static final String EXTENTREPORFOLDERTPATH=System.getProperty("user.dir")+"/extent-test-output";
-	private static String extentReportFilePath="";
+	private static       String extentReportFilePath="";
+	private static final String RUNMANAGERSHEET="RUNMANAGER";
+	private static final String ITERATIONDATASHEET="DATA";
 
 
+	public static String getRunmanagersheet() {
+		return RUNMANAGERSHEET;
+	}
 
+	public static String getIterationdatasheet() {
+		return ITERATIONDATASHEET;
+	}
 
 	public static String getExtentReportFilePath() throws Exception {
 		if(extentReportFilePath.isEmpty()) {
@@ -25,7 +33,7 @@ public final class FrameworkConstants {                          // final= not t
 		}
 		return extentReportFilePath;
 	}
-	
+
 	public static String getExcelpath() {
 		return EXCELPATH;
 	}

@@ -15,8 +15,8 @@ public final class TC_LoginRetailUser extends BaseTest{
 
 	@Test(dataProvider = "getData" , dataProviderClass = DataProviderUtils.class)
 	public void LoginLogoutTest(Map<String ,String> data) throws Exception {
-		
-		
+
+
 		String title=new RetailLogin().enterUserName(data.get("username")).enterPass(data.get("password")).getCaptchCode().clickOnLogin()
 				.clickOnLogout()
 				.getTitle();
@@ -25,12 +25,12 @@ public final class TC_LoginRetailUser extends BaseTest{
 		.isEqualTo("Login");
 
 	}
-	
-	
+
+
 	@Test(dataProvider = "getData" , dataProviderClass = DataProviderUtils.class)
 	public void newTest(Map<String ,String> data) throws Exception {
-		
-		
+
+
 		String title=new RetailLogin().enterUserName(data.get("username")).enterPass(data.get("password")).getCaptchCode().clickOnLogin()
 				.clickOnLogout()
 				.getTitle();
@@ -40,7 +40,7 @@ public final class TC_LoginRetailUser extends BaseTest{
 
 	}
 
-	
-	
+
+
 
 }
