@@ -10,6 +10,8 @@ public final class FrameworkConstants {                          // final= not t
 	}
 	private static final String PATHTORESOURCES=System.getProperty("user.dir")+"/src/test/resources"; 
 	private static final String CHROMEDRIVERPATH=PATHTORESOURCES+"/executables/chromedriver.exe";
+	private static final String GECKODRIVERPATH=PATHTORESOURCES+"/executables/geckodriver.exe";
+	private static final String MSEDGEDRIVERPATH=PATHTORESOURCES+"/executables/msedgedriver.exe";
 	private static final String CONFIGFILEPATH=PATHTORESOURCES+"/config/config.properties";
 	private static final int    EXPLICITWAIT=10;
 	private static final String EXCELPATH=PATHTORESOURCES+"/excel/testData.xlsx";
@@ -18,12 +20,21 @@ public final class FrameworkConstants {                          // final= not t
 	private static final String RUNMANAGERSHEET="RUNMANAGER";
 	private static final String ITERATIONDATASHEET="DATA";
 
+	
+	public static String getFirefoxDriverPath() {
+		return GECKODRIVERPATH;
+	}
+	
+	public static String getMsedgeDriverPath() {
+		return MSEDGEDRIVERPATH;
+	}
+	
 
-	public static String getRunmanagersheet() {
+	public static String getRunManagerSheet() {
 		return RUNMANAGERSHEET;
 	}
 
-	public static String getIterationdatasheet() {
+	public static String getIterationDataSheet() {
 		return ITERATIONDATASHEET;
 	}
 

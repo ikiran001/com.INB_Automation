@@ -14,7 +14,7 @@ public final class ExtentReport {
 	private ExtentReport(){ 
 	}
 	private static ExtentReports extent;
-	
+
 
 	public static void initReports() throws Exception {
 		if(Objects.isNull(extent)) {
@@ -24,13 +24,15 @@ public final class ExtentReport {
 			extent.attachReporter(spark);
 			spark.config().setTheme(Theme.DARK);
 			spark.config().setDocumentTitle("INB Report");
-			spark.config().setReportName("Test 1");
+			spark.config().setReportName("INB AUTOMATION REPORT BY KIRAN");
 		}
 	}
 
 	public static void flushReport() throws Exception {
 		if(Objects.nonNull(extent)) {
-			extent.flush();}
+			extent.flush();
+		}
+		ExtentManager.unload();
 		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
 	}
 

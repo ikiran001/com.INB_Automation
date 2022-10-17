@@ -6,14 +6,13 @@ import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
 import com.INB.pageObjects.RetailLogin;
-import com.INB.utils.DataProviderUtils;
 
 public final class TC_LoginRetailUser extends BaseTest{
 	private TC_LoginRetailUser(){
 
 	}
 
-	@Test(dataProvider = "getData" , dataProviderClass = DataProviderUtils.class)
+	@Test
 	public void LoginLogoutTest(Map<String ,String> data) throws Exception {
 
 
@@ -27,7 +26,7 @@ public final class TC_LoginRetailUser extends BaseTest{
 	}
 
 
-	@Test(dataProvider = "getData" , dataProviderClass = DataProviderUtils.class)
+	@Test
 	public void newTest(Map<String ,String> data) throws Exception {
 
 

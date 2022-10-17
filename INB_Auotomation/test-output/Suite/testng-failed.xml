@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="com.INB.listeners.ListenerCLass"/>
     <listener class-name="com.INB.listeners.MethodInterceptor"/>
+    <listener class-name="com.INB.listeners.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>

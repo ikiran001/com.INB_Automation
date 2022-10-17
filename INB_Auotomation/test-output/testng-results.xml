@@ -2,20 +2,27 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-14T17:22:10 IST" name="Suite" finished-at="2022-10-14T17:22:30 IST" duration-ms="20449">
+  <suite started-at="2022-10-17T12:14:53 IST" name="Suite" finished-at="2022-10-17T12:15:12 IST" duration-ms="19107">
     <groups>
     </groups>
-    <test started-at="2022-10-14T17:22:10 IST" name="Test" finished-at="2022-10-14T17:22:30 IST" duration-ms="20449">
+    <test started-at="2022-10-17T12:14:53 IST" name="Test" finished-at="2022-10-17T12:15:12 IST" duration-ms="19107">
       <class name="com.INB.tests.TC_LoginRetailUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.INB.tests.TC_LoginRetailUser@2dde1bff]" started-at="2022-10-14T17:22:11 IST" name="setUp" finished-at="2022-10-14T17:22:16 IST" duration-ms="5507" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="LoginLogoutTest(java.util.Map)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@2dde1bff]" started-at="2022-10-14T17:22:16 IST" name="LoginLogoutTest" description="To check whether the user can successfully login and logout" data-provider="getData" finished-at="2022-10-14T17:22:29 IST" duration-ms="13193" status="FAIL">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@10163d6]" started-at="2022-10-17T12:14:54 IST" name="setUp" finished-at="2022-10-17T12:14:58 IST" duration-ms="4038" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Asdf@123, testname=LoginLogoutTest, execute=yes, username=CIF2}]]>
+                <![CDATA[[Ljava.lang.Object;@982bb90]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginLogoutTest(java.util.Map)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@10163d6]" started-at="2022-10-17T12:14:58 IST" name="LoginLogoutTest" description="To check whether the user can successfully login and logout" data-provider="getData" finished-at="2022-10-17T12:15:12 IST" duration-ms="13679" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Asdf@1234, testname=LoginLogoutTest, execute=yes, browser=chrome, username=CIF2}]]>
               </value>
             </param>
           </params>
@@ -30,7 +37,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:21)
 at com.INB.pageObjects.BasePage.click(BasePage.java:14)
 at com.INB.pageObjects.RetailHomePage.clickOnLogout(RetailHomePage.java:13)
-at com.INB.tests.TC_LoginRetailUser.LoginLogoutTest(TC_LoginRetailUser.java:21)
+at com.INB.tests.TC_LoginRetailUser.LoginLogoutTest(TC_LoginRetailUser.java:20)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -47,15 +54,15 @@ at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecuto
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="bs-example-navbar-collapse-1"]/ul/li[3]"}
-  (Session info: chrome=105.0.5195.127)
+  (Session info: chrome=106.0.5249.119)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: '01CEDHWLAP459', ip: '10.1.71.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 105.0.5195.127, webStorageEnabled: true}
-Session ID: 5900bb2a126dff7675d24d73edc4f36f
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 106.0.5249.119, webStorageEnabled: true}
+Session ID: ff28c1eb88eee2ba9b025ff1f48a9bcb
 *** Element info: {Using=xpath, value=//*[@id="bs-example-navbar-collapse-1"]/ul/li[3]}
 at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -83,7 +90,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginLogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_LoginRetailUser@2dde1bff]" started-at="2022-10-14T17:22:30 IST" name="tearDown" finished-at="2022-10-14T17:22:30 IST" duration-ms="542" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_LoginRetailUser@10163d6]" started-at="2022-10-17T12:15:12 IST" name="tearDown" finished-at="2022-10-17T12:15:12 IST" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

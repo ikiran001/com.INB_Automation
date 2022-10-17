@@ -38,11 +38,13 @@ public class BasePage {
 		ExplicitWaitFactory.performExlpicitWait(waitStratergy, imageCode);
 		WebElement imageCaptchaCodeValue=DriverManager.getDriver().findElement(imageCode);
 		DriverManager.getDriver().findElement(fieldCaptcha).sendKeys(imageCaptchaCodeValue.getAttribute("value"));
-		ExtentLogger.pass(imageCaptchaCodeValue.getAttribute("value")+" successfully sent  to  the Captcha Code");
+		try {
+			ExtentLogger.pass(imageCaptchaCodeValue.getAttribute("value")+" successfully sent  to  the Captcha Code" ,true);
+		} catch (Exception e) {
+					e.printStackTrace();
+		}
 		
 	}
-
-
 }
 
 
