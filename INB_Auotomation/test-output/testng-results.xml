@@ -1,61 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-18T11:18:53 IST" name="Suite" finished-at="2022-10-18T11:19:15 IST" duration-ms="21959">
+  <suite started-at="2022-10-18T15:35:55 IST" name="Suite" finished-at="2022-10-18T15:36:08 IST" duration-ms="12603">
     <groups>
     </groups>
-    <test started-at="2022-10-18T11:18:53 IST" name="Test" finished-at="2022-10-18T11:19:15 IST" duration-ms="21959">
+    <test started-at="2022-10-18T15:35:55 IST" name="Test" finished-at="2022-10-18T15:36:08 IST" duration-ms="12603">
       <class name="com.INB.tests.TC_LoginRetailUser">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T11:18:54 IST" name="setUp" finished-at="2022-10-18T11:18:59 IST" duration-ms="4936" status="PASS">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T15:35:56 IST" name="setUp" finished-at="2022-10-18T15:36:01 IST" duration-ms="5336" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@5b022357]]>
+                <![CDATA[[Ljava.lang.Object;@7906578e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LoginLogoutTest(java.util.Map)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T11:18:59 IST" name="LoginLogoutTest" description="To check whether the user can successfully login and logout" data-provider="getData" finished-at="2022-10-18T11:19:05 IST" duration-ms="5498" status="PASS">
+        <test-method signature="newTest(java.util.Map)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T15:36:01 IST" name="newTest" description="To check this test runs" data-provider="getData" finished-at="2022-10-18T15:36:07 IST" duration-ms="5020" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Asdf@123, testname=LoginLogoutTest, execute=yes, browser=chrome, username=spcbtest}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginLogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T11:19:05 IST" name="tearDown" finished-at="2022-10-18T11:19:06 IST" duration-ms="654" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T11:19:06 IST" name="setUp" finished-at="2022-10-18T11:19:10 IST" duration-ms="4321" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@6f8e0cee]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="newTest(java.util.Map)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T11:19:10 IST" name="newTest" description="To check this test runs" data-provider="getData" finished-at="2022-10-18T11:19:15 IST" duration-ms="4733" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Asdf@123, testname=newTest, execute=yes, browser=chrome, username=spcb}]]>
+                <![CDATA[{Test Case Name=newTest, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T11:19:15 IST" name="tearDown" finished-at="2022-10-18T11:19:15 IST" duration-ms="322" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T15:36:07 IST" name="tearDown" finished-at="2022-10-18T15:36:08 IST" duration-ms="982" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

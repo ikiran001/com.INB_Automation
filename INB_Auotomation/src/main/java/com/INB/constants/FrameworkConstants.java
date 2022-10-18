@@ -19,25 +19,27 @@ public final class FrameworkConstants {                          // final= not t
 	private static       String extentReportFilePath="";
 	private static final String RUNMANAGERSHEET="RUNMANAGER";
 	private static final String ITERATIONDATASHEET="RETAIL_DATA";
+	private static final String TESTCASENAME="Test Case Name";
+	private static final String EXECUTE="Execute";
+	private static final String BROWSER="Browser";
+	private static final String PRIORITY="Priority";
+	private static final String COUNT="Count";
+	private static final String TESTDESCRIPTION="Test Description";
 
-	
-	public static String getFirefoxDriverPath() {
-		return GECKODRIVERPATH;
-	}
-	
-	public static String getMsedgeDriverPath() {
-		return MSEDGEDRIVERPATH;
-	}
-	
 
-	public static String getRunManagerSheet() {
-		return RUNMANAGERSHEET;
+
+	public static String getTestDescription() {
+		return TESTDESCRIPTION;
 	}
 
-	public static String getIterationDataSheet() {
-		return ITERATIONDATASHEET;
+	private static String createEtentReportPath() throws Exception {
+		if(PropertyUtils.get(ConfigProperties.OVERRIDEREPORTS).equals("yes")) {
+			return EXTENTREPORFOLDERTPATH+"/"+System.currentTimeMillis()+"/index.html";
+		}
+		else {
+			return EXTENTREPORFOLDERTPATH+"/index.html";
+		}
 	}
-
 	public static String getExtentReportFilePath() throws Exception {
 		if(extentReportFilePath.isEmpty()) {
 			extentReportFilePath=createEtentReportPath();
@@ -49,15 +51,6 @@ public final class FrameworkConstants {                          // final= not t
 		return EXCELPATH;
 	}
 
-	private static String createEtentReportPath() throws Exception {
-		if(PropertyUtils.get(ConfigProperties.OVERRIDEREPORTS).equals("yes")) {
-			return EXTENTREPORFOLDERTPATH+"/"+System.currentTimeMillis()+"/index.html";
-		}
-		else {
-			return EXTENTREPORFOLDERTPATH+"/index.html";
-		}
-	}
-
 	public static int getExplicitwait() {
 		return EXPLICITWAIT;
 	}
@@ -66,6 +59,37 @@ public final class FrameworkConstants {                          // final= not t
 	}
 	public static String getChromeDriverPath() {
 		return CHROMEDRIVERPATH;
+	}
+	public static String getCountDetails() {
+		return COUNT;
+	}
+	public static String getPriorityDetails() {
+		return PRIORITY;
+	}
+
+	public static String getBrowserDetails() {
+		return BROWSER;
+	}
+
+	public static String getExecuteDetails() {
+		return EXECUTE;
+	}
+	public static String getTestCaseName() {
+		return TESTCASENAME;
+	}
+	public static String getFirefoxDriverPath() {
+		return GECKODRIVERPATH;
+	}
+
+	public static String getMsedgeDriverPath() {
+		return MSEDGEDRIVERPATH;
+	}
+	public static String getRunManagerSheet() {
+		return RUNMANAGERSHEET;
+	}
+
+	public static String getIterationDataSheet() {
+		return ITERATIONDATASHEET;
 	}
 
 

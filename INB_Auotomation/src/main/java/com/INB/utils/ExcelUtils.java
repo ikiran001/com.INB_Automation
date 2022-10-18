@@ -7,14 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-
-import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import com.INB.constants.FrameworkConstants;
-import com.INB.reports.ExtentLogger;
-import com.google.common.collect.Table.Cell;
 
 public final class ExcelUtils {
 
@@ -22,20 +17,20 @@ public final class ExcelUtils {
 
 	}
 
-	/*
-	 * this method will return all list of map which contains the values from given
-	 * excel sheet as key and value pair
-	 */
+	/*******************************************************************************************************************
+	                  this method will return all list of map which contains the values from given
+	                                excel sheet as key and value pair
+
+	 *******************************************************************************************************************/
 
 
 	public static List<Map<String,String>> getTestDetails(String sheetName) { 
 		List<Map<String,String>> list=null;
 		FileInputStream fs = null;
-	
+
 		try {
 			fs=new FileInputStream(FrameworkConstants.getExcelpath());
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
-
 			XSSFSheet sheet=workbook.getSheet(sheetName);
 
 			list=new ArrayList<Map<String,String>>();
@@ -45,16 +40,16 @@ public final class ExcelUtils {
 			int lastColNum=sheet.getRow(0).getLastCellNum();
 
 			for(int i=1; i<=lastRowNum;i++) {  //for row 
-				map=new HashMap<String, String>();  //everytime when rownumgets updated new hashmap will get generated
-				for(int j=0;j<lastColNum;j++) {    //for coloum
-					
-					
-					String key=sheet.getRow(0).getCell(j).getStringCellValue();  //will save all the values form headerline as a key
-					
-					String value=sheet.getRow(i).getCell(j).getStringCellValue();//will save all the values from data as a value
-					
-					map.put(key, value);
 
+				map=new HashMap<String, String>();  //everytime when rownumgets updated new hashmap will get generated
+
+				for(int j=0;j<lastColNum;j++) {    //for coloum
+
+					String key=sheet.getRow(0).getCell(j).getStringCellValue();  //will save all the data form headerline as a key
+
+					String value=sheet.getRow(i).getCell(j).getStringCellValue();//will save all the data from givendata as a value
+
+					map.put(key, value);
 				}
 				list.add(map);   //this will add all the maps<string,string>  in the form of list
 			}
@@ -63,10 +58,10 @@ public final class ExcelUtils {
 
 			e.printStackTrace();
 		}
-		
+
 		catch(NullPointerException npe)
 		{
-			 npe.getLocalizedMessage();
+			npe.getLocalizedMessage();
 		}		finally {
 			try {
 				if(Objects.nonNull(fs)) {
