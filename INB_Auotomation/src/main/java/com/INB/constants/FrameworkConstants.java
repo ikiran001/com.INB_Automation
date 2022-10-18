@@ -18,7 +18,7 @@ public final class FrameworkConstants {                          // final= not t
 	private static final String EXTENTREPORFOLDERTPATH=System.getProperty("user.dir")+"/extent-test-output";
 	private static       String extentReportFilePath="";
 	private static final String RUNMANAGERSHEET="RUNMANAGER";
-	private static final String ITERATIONDATASHEET="DATA";
+	private static final String ITERATIONDATASHEET="RETAIL_DATA";
 
 	
 	public static String getFirefoxDriverPath() {

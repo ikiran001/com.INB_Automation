@@ -13,26 +13,29 @@ public class BasePage {
 	protected void click(By by ,WaitStrategy waitStratergy ,String elementName) throws Exception {
 		WebElement element=	ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 		element.click();
-		ExtentLogger.pass(elementName+ " is  clicked" , true);
+		ExtentLogger.pass(elementName+ " is  clicked");
 	}
 
 	protected void sendKeys(By by, String value,WaitStrategy waitStratergy,String elementName) throws Exception {
 		WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 		element.sendKeys(value);
 		ExtentLogger.pass(value+ " is successufully entered in "+elementName , true );
-			}
+	}
 
 	protected String getPageTitle() {
 		return DriverManager.getDriver().getTitle();
-		
+
 	}
 
-	protected  void acceptAlert() throws Exception {
-		DriverManager.getDriver().switchTo().alert().accept();
-		ExtentLogger.pass(" Alert accepeted successufully " , true);
-		
-	}
-	
+	/*
+	 * protected void acceptAlert() throws Exception { try {
+	 * DriverManager.getDriver().switchTo().alert().accept();
+	 * ExtentLogger.pass(" Alert accepeted successufully " , true); }catch(Exception
+	 * e){ e.getLocalizedMessage(); }
+	 * 
+	 * }
+	 */
+
 	protected void getCaptcha(By imageCode , By fieldCaptcha , WaitStrategy waitStratergy ) {
 		ExplicitWaitFactory.performExlpicitWait(waitStratergy, fieldCaptcha);
 		ExplicitWaitFactory.performExlpicitWait(waitStratergy, imageCode);
@@ -41,9 +44,9 @@ public class BasePage {
 		try {
 			ExtentLogger.pass(imageCaptchaCodeValue.getAttribute("value")+" successfully sent  to  the Captcha Code" ,true);
 		} catch (Exception e) {
-					e.printStackTrace();
+			e.printStackTrace();
 		}
-		
+
 	}
 }
 

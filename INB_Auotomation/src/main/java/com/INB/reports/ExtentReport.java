@@ -5,6 +5,7 @@ import java.io.File;
 import java.util.Objects;
 
 import com.INB.constants.FrameworkConstants;
+import com.INB.enums.CategoryType;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -42,4 +43,12 @@ public final class ExtentReport {
 	}
 
 
+	public static void addAuthor(String[] authors) {
+		for(String temp: authors)
+			ExtentManager.getExtentTest().assignAuthor(temp);
+	}
+	public static void addCategories(CategoryType[] categories) {
+		for(CategoryType temp: categories)
+			ExtentManager.getExtentTest().assignCategory(temp.toString());
+	}
 }

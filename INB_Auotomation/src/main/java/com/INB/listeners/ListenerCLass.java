@@ -8,6 +8,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.INB.annotations.FrameworkAnnotations;
 import com.INB.reports.ExtentLogger;
 import com.INB.reports.ExtentReport;
 
@@ -66,6 +67,8 @@ public class ListenerCLass implements ITestListener , ISuiteListener{
 
 	public void onTestStart(ITestResult result) {
 		ExtentReport.createTest(result.getMethod().getDescription());
+		ExtentReport.addAuthor(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotations.class).author());
+		ExtentReport.addCategories(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotations.class).categories());
 	}
 
 	public void onTestSuccess(ITestResult result) {

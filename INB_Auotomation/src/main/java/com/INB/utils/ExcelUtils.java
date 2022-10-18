@@ -8,10 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.INB.constants.FrameworkConstants;
+import com.INB.reports.ExtentLogger;
+import com.google.common.collect.Table.Cell;
 
 public final class ExcelUtils {
 
@@ -28,7 +31,7 @@ public final class ExcelUtils {
 	public static List<Map<String,String>> getTestDetails(String sheetName) { 
 		List<Map<String,String>> list=null;
 		FileInputStream fs = null;
-
+	
 		try {
 			fs=new FileInputStream(FrameworkConstants.getExcelpath());
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
@@ -44,9 +47,12 @@ public final class ExcelUtils {
 			for(int i=1; i<=lastRowNum;i++) {  //for row 
 				map=new HashMap<String, String>();  //everytime when rownumgets updated new hashmap will get generated
 				for(int j=0;j<lastColNum;j++) {    //for coloum
-
+					
+					
 					String key=sheet.getRow(0).getCell(j).getStringCellValue();  //will save all the values form headerline as a key
+					
 					String value=sheet.getRow(i).getCell(j).getStringCellValue();//will save all the values from data as a value
+					
 					map.put(key, value);
 
 				}
@@ -57,7 +63,11 @@ public final class ExcelUtils {
 
 			e.printStackTrace();
 		}
-		finally {
+		
+		catch(NullPointerException npe)
+		{
+			 npe.getLocalizedMessage();
+		}		finally {
 			try {
 				if(Objects.nonNull(fs)) {
 					fs.close();
