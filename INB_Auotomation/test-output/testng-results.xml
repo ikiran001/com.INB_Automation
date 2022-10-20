@@ -1,39 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-18T15:35:55 IST" name="Suite" finished-at="2022-10-18T15:36:08 IST" duration-ms="12603">
+  <suite started-at="2022-10-20T17:50:31 IST" name="Suite" finished-at="2022-10-20T17:50:37 IST" duration-ms="6435">
     <groups>
     </groups>
-    <test started-at="2022-10-18T15:35:55 IST" name="Test" finished-at="2022-10-18T15:36:08 IST" duration-ms="12603">
-      <class name="com.INB.tests.TC_LoginRetailUser">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T15:35:56 IST" name="setUp" finished-at="2022-10-18T15:36:01 IST" duration-ms="5336" status="PASS">
+    <test started-at="2022-10-20T17:50:31 IST" name="Test" finished-at="2022-10-20T17:50:37 IST" duration-ms="6435">
+      <class name="com.INB.tests.TC_DashboardRetailMyAccount">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@50ad3bc1]" started-at="2022-10-20T17:50:31 IST" name="setUp" finished-at="2022-10-20T17:50:36 IST" duration-ms="5021" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@7906578e]]>
+                <![CDATA[[Ljava.lang.Object;@6f8e0cee]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="newTest(java.util.Map)[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T15:36:01 IST" name="newTest" description="To check this test runs" data-provider="getData" finished-at="2022-10-18T15:36:07 IST" duration-ms="5020" status="PASS">
+        <test-method is-config="true" signature="loginTest(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@50ad3bc1]" started-at="2022-10-20T17:50:36 IST" name="loginTest" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1666268436954" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated loginTest.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated loginTest.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="myAccountsSummary(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@50ad3bc1]" started-at="2022-10-20T17:50:36 IST" name="myAccountsSummary" description="To check Mouse Hover functionality on My Account menu" data-provider="getData" finished-at="2022-10-20T17:50:36 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Test Case Name=newTest, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
+                <![CDATA[{Test Case Name=myAccountsSummary, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
               </value>
             </param>
           </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated loginTest.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated loginTest.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_LoginRetailUser@6c130c45]" started-at="2022-10-18T15:36:07 IST" name="tearDown" finished-at="2022-10-18T15:36:08 IST" duration-ms="982" status="PASS">
+        </test-method> <!-- myAccountsSummary -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@50ad3bc1]" started-at="2022-10-20T17:50:37 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1666268437442" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.INB.tests.TC_LoginRetailUser -->
+      </class> <!-- com.INB.tests.TC_DashboardRetailMyAccount -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -1,9 +1,13 @@
 package com.INB.driver;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+
 import com.INB.constants.FrameworkConstants;
 import com.INB.enums.ConfigProperties;
 import com.INB.utils.PropertyUtils;
@@ -12,7 +16,8 @@ public final class Driver {
 	private Driver() {
 
 	}
-	public static void initDriver(String browser) throws Exception {
+	
+	public static void initDriver(String browser ) throws Exception {
 		
 		if (Objects.isNull(DriverManager.getDriver())) {
 			if(browser.trim().toLowerCase().equalsIgnoreCase("chrome")) {
@@ -24,7 +29,7 @@ public final class Driver {
 				System.setProperty("webdriver.edge.driver", FrameworkConstants.getMsedgeDriverPath());
 				DriverManager.setDriver(new EdgeDriver());
 			}
-			
+
 			/*
 			 * else if(browser.trim().toLowerCase().equalsIgnoreCase("firefox")) {
 			 * System.setProperty("webdriver.gecko.driver",
@@ -35,7 +40,9 @@ public final class Driver {
 			DriverManager.getDriver().manage().window().maximize();
 			DriverManager.getDriver().get(PropertyUtils.get(ConfigProperties.URL));
 
-		}}
+		}
+	
+	}
 
 	public static void quitDriver() {
 		if(Objects.nonNull(DriverManager.getDriver())) {

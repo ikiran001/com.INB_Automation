@@ -15,7 +15,7 @@ public final class TC_LoginRetailUser extends BaseTest{
 	}
     @FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void LoginLogoutTest(Map<String ,String> data) throws Exception {
+	public void TC00(Map<String ,String> data) throws Exception {
 
 
 		String title=new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2")).getCaptchCode().clickOnLogin()
