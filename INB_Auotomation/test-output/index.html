@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,41 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="myAccountsSummary({Test Case Name=myAccountsSummary, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">myAccountsSummary({Test Case Name=myAccountsSummary, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="eServiceClick({Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">eServiceClick({Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="eServiceMH({Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">eServiceMH({Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="myAccountsClick({Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">myAccountsClick({Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="myAccountsMH({Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">myAccountsMH({Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="requestMH({Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">requestMH({Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,35 +139,64 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.INB.tests.TC_DashboardRetailMyAccount</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="myAccountsSummary({Test Case Name=myAccountsSummary, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">
-                  </a> <!-- myAccountsSummary({Test Case Name=myAccountsSummary, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}) -->
-                  <span class="method-name">myAccountsSummary</span>
-                  <span class="parameters">({Test Case Name=myAccountsSummary, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @BeforeMethod annotated loginTest.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 10 stack frames
-</div> <!-- stack-trace -->
+                  <a name="eServiceClick({Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">
+                  </a> <!-- eServiceClick({Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}) -->
+                  <span class="method-name">eServiceClick</span>
+                  <span class="parameters">({Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
                   <em>
-(To check Mouse Hover functionality on My Account menu)                  </em>
+(checking E-services menu with click method)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="eServiceMH({Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">
+                  </a> <!-- eServiceMH({Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}) -->
+                  <span class="method-name">eServiceMH</span>
+                  <span class="parameters">({Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                  <em>
+(checking E-services menu with mouse Hover method)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="myAccountsClick({Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">
+                  </a> <!-- myAccountsClick({Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}) -->
+                  <span class="method-name">myAccountsClick</span>
+                  <span class="parameters">({Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                  <em>
+(checking all accounts with click method)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="myAccountsMH({Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">
+                  </a> <!-- myAccountsMH({Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}) -->
+                  <span class="method-name">myAccountsMH</span>
+                  <span class="parameters">({Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                  <em>
+(checking all accounts with  mouse hover method)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="requestMH({Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})">
+                  </a> <!-- requestMH({Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}) -->
+                  <span class="method-name">requestMH</span>
+                  <span class="parameters">({Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                  <em>
+(checking Request menu with mouse hover method)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -159,8 +208,8 @@ For more information on native dependency injection please refer to https://test
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite data-provider-thread-count=&quot;1&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.INB.listeners.ListenerCLass&quot;/&gt;
     &lt;listener class-name=&quot;com.INB.listeners.MethodInterceptor&quot;/&gt;
+    &lt;listener class-name=&quot;com.INB.listeners.ListenerCLass&quot;/&gt;
     &lt;listener class-name=&quot;com.INB.listeners.AnnotationTransformer&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
@@ -205,16 +254,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'myAccountsSummary')
+data.setCell(0, 1, 'requestMH')
 data.setCell(0, 2, 'com.INB.tests.TC_DashboardRetailMyAccount')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 11152);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'myAccountsClick')
+data.setCell(1, 2, 'com.INB.tests.TC_DashboardRetailMyAccount')
+data.setCell(1, 3, 10347);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'myAccountsMH')
+data.setCell(2, 2, 'com.INB.tests.TC_DashboardRetailMyAccount')
+data.setCell(2, 3, 10341);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'eServiceMH')
+data.setCell(3, 2, 'com.INB.tests.TC_DashboardRetailMyAccount')
+data.setCell(3, 3, 8543);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'eServiceClick')
+data.setCell(4, 2, 'com.INB.tests.TC_DashboardRetailMyAccount')
+data.setCell(4, 3, 7907);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 48 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -242,16 +307,64 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.INB.tests.TC_DashboardRetailMyAccount</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp([{Test Case Name=myAccountsSummary, Execute=yes, data2=Asdf@123, data1=spcb, Browser=chrome}])</span>
+                <span class="method-name">setUp([{Test Case Name=eServiceClick, Execute=yes, data2=Asdf@123, data1=spcb, Browser=chrome}])</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">myAccountsSummary({Test Case Name=myAccountsSummary, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
-                <span class="method-start">5038 ms</span>
+                <span class="method-name">eServiceClick({Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                <span class="method-start">4889 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">5512 ms</span>
+                <span class="method-start">13130 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([{Test Case Name=eServiceMH, Execute=yes, data2=Asdf@123, data1=spcb, Browser=chrome}])</span>
+                <span class="method-start">15267 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">eServiceMH({Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                <span class="method-start">20990 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">29852 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([{Test Case Name=myAccountsClick, Execute=yes, data2=Asdf@123, data1=spcb, Browser=chrome}])</span>
+                <span class="method-start">31639 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">myAccountsClick({Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                <span class="method-start">38046 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">48708 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([{Test Case Name=myAccountsMH, Execute=yes, data2=Asdf@123, data1=spcb, Browser=chrome}])</span>
+                <span class="method-start">50092 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">myAccountsMH({Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                <span class="method-start">53603 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">64282 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([{Test Case Name=requestMH, Execute=yes, data2=Asdf@123, data1=spcb, Browser=chrome}])</span>
+                <span class="method-start">64740 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">requestMH({Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
+                <span class="method-start">70697 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">82164 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

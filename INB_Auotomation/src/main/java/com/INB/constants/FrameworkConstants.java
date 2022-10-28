@@ -13,7 +13,7 @@ public final class FrameworkConstants {                          // final= not t
 	private static final String GECKODRIVERPATH=PATHTORESOURCES+"/executables/geckodriver.exe";
 	private static final String MSEDGEDRIVERPATH=PATHTORESOURCES+"/executables/msedgedriver.exe";
 	private static final String CONFIGFILEPATH=PATHTORESOURCES+"/config/config.properties";
-	private static final int    EXPLICITWAIT=10;
+	private static final int    EXPLICITWAIT=20;
 	private static final String EXCELPATH=PATHTORESOURCES+"/excel/testData.xlsx";
 	private static final String EXTENTREPORFOLDERTPATH=System.getProperty("user.dir")+"/extent-test-output";
 	private static       String extentReportFilePath="";
@@ -32,7 +32,7 @@ public final class FrameworkConstants {                          // final= not t
 		return TESTDESCRIPTION;
 	}
 
-	private static String createEtentReportPath() throws Exception {
+	private static String createEtentReportPath()  {
 		if(PropertyUtils.get(ConfigProperties.OVERRIDEREPORTS).equals("yes")) {
 			return EXTENTREPORFOLDERTPATH+"/"+System.currentTimeMillis()+"/index.html";
 		}
@@ -40,7 +40,7 @@ public final class FrameworkConstants {                          // final= not t
 			return EXTENTREPORFOLDERTPATH+"/index.html";
 		}
 	}
-	public static String getExtentReportFilePath() throws Exception {
+	public static String getExtentReportFilePath()  {
 		if(extentReportFilePath.isEmpty()) {
 			extentReportFilePath=createEtentReportPath();
 		}

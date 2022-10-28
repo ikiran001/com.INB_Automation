@@ -12,14 +12,14 @@ import com.INB.constants.FrameworkConstants;
 import com.INB.utils.ExcelUtils;
 
 public class MethodInterceptor implements IMethodInterceptor {
-	
+
 
 	/****************************************************************************************************************
 	                this listener class will give you the all the eligible methods(test cases)
 	                            whose execution parameter is set  as yes
 	 ***************************************************************************************************************/
-	
-	
+
+
 	public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext context) {
 
 		List<Map<String, String>> list=ExcelUtils.getTestDetails(FrameworkConstants.getRunManagerSheet()); // Iterate this list with methods(contains all the testcases)
@@ -29,11 +29,13 @@ public class MethodInterceptor implements IMethodInterceptor {
 
 				if(methods.get(i).getMethod().getMethodName().equals(list.get(j).get(FrameworkConstants.getTestCaseName())) && 
 						list.get(j).get(FrameworkConstants.getExecuteDetails()).equalsIgnoreCase("yes")) {
-					methods.get(i).getMethod().setDescription(list.get(j).get(FrameworkConstants.getTestDescription()));
+					
 					methods.get(i).getMethod().setInvocationCount(Integer.parseInt(list.get(j).get(FrameworkConstants.getCountDetails())));//will set the exceecutable count from j for loop to methods from i for loop
+					methods.get(i).getMethod().setDescription(list.get(j).get(FrameworkConstants.getTestDescription()));
 					methods.get(i).getMethod().setPriority(Integer.parseInt(list.get(j).get(FrameworkConstants.getPriorityDetails())));
 					result.add(methods.get(i)); //this will add all the eligible methods to result instance
 				}
+				
 			}
 		}
 

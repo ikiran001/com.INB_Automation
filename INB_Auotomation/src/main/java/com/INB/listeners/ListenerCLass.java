@@ -15,24 +15,15 @@ import com.INB.reports.ExtentReport;
 public class ListenerCLass implements ITestListener , ISuiteListener{
 
 	public void onFinish(ISuite suite) {
-		try {
+		
 			ExtentReport.flushReport();
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
+		
 	}
 
 	public void onStart(ISuite suite) {
-		try {
+		
 			ExtentReport.initReports();
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
+		
 	}
 
 	public void onFinish(ITestContext context) {
@@ -45,14 +36,11 @@ public class ListenerCLass implements ITestListener , ISuiteListener{
 
 
 	public void onTestFailure(ITestResult result) {
-		try {
+	
 			ExtentLogger.fail(result.getMethod().getMethodName()+ " is failed" , true);
 			ExtentLogger.fail(result.getThrowable().toString());
 			ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
+		
 
 	}
 

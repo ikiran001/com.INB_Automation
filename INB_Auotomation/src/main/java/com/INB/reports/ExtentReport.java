@@ -2,6 +2,7 @@ package com.INB.reports;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
 import java.util.Objects;
 
 import com.INB.constants.FrameworkConstants;
@@ -17,7 +18,7 @@ public final class ExtentReport {
 	private static ExtentReports extent;
 
 
-	public static void initReports() throws Exception {
+	public static void initReports()  {
 		if(Objects.isNull(extent)) {
 			extent=new ExtentReports();
 			ExtentSparkReporter spark=new ExtentSparkReporter(FrameworkConstants.getExtentReportFilePath());
@@ -29,12 +30,18 @@ public final class ExtentReport {
 		}
 	}
 
-	public static void flushReport() throws Exception {
+	public static void flushReport()  {
 		if(Objects.nonNull(extent)) {
 			extent.flush();
 		}
-		ExtentManager.unload();
-		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
+	
+		try {
+			ExtentManager.unload();
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
 	}
 
 	public static void createTest(String testCaseName) {

@@ -9,7 +9,11 @@ import com.INB.constants.FrameworkConstants;
 import com.INB.driver.DriverManager;
 import com.INB.enums.WaitStrategy;
 
-public class ExplicitWaitFactory {
+public final  class ExplicitWaitFactory {
+
+	private ExplicitWaitFactory() {
+
+	}
 
 	public static WebElement performExlpicitWait(WaitStrategy wait, By by) {
 		WebElement element=null;

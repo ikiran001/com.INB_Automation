@@ -2,18 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite data-provider-thread-count="1" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="com.INB.listeners.ListenerCLass"/>
     <listener class-name="com.INB.listeners.MethodInterceptor"/>
+    <listener class-name="com.INB.listeners.ListenerCLass"/>
     <listener class-name="com.INB.listeners.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
       <class name="com.INB.tests.TC_DashboardRetailMyAccount">
         <methods>
-          <include name="myAccountsSummary"/>
           <include name="tearDown"/>
-          <include name="loginTest"/>
           <include name="setUp"/>
+          <include name="eServiceClick" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.INB.tests.TC_DashboardRetailMyAccount -->
     </classes>

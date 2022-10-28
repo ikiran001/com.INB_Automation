@@ -3,15 +3,16 @@
 <suite name="Suite" data-provider-thread-count='1'>
 
 <listeners>
-     <listener class-name="com.INB.listeners.ListenerCLass"></listener>
      <listener class-name="com.INB.listeners.MethodInterceptor"></listener>
+     <listener class-name="com.INB.listeners.ListenerCLass"></listener>
      <listener class-name="com.INB.listeners.AnnotationTransformer"></listener> 
 </listeners>
 
+
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
-      <!--    <class name="com.INB.tests.TC_LoginRetailUser"/>-->
-            <class name="com.INB.tests.TC_DashboardRetailMyAccount"/>
+        <!--    <class name="com.INB.tests.TC_LoginRetailUser"/> -->
+            <class name="com.INB.tests.TC_DashboardRetailMyAccount"/> 
     </classes>
     
   </test> <!-- Test -->

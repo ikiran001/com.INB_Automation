@@ -1,8 +1,5 @@
 package com.INB.driver;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +14,7 @@ public final class Driver {
 
 	}
 	
-	public static void initDriver(String browser ) throws Exception {
+	public static void initDriver(String browser ) {
 		
 		if (Objects.isNull(DriverManager.getDriver())) {
 			if(browser.trim().toLowerCase().equalsIgnoreCase("chrome")) {

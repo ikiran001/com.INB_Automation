@@ -2,12 +2,12 @@ package com.INB.pageObjects;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 import com.INB.driver.DriverManager;
 import com.INB.enums.WaitStrategy;
@@ -17,19 +17,24 @@ import com.INB.reports.ExtentLogger;
 public class BasePage {
 	private final Actions action = new Actions(DriverManager.getDriver());
 
-	protected void click(By by ,WaitStrategy waitStratergy ,String elementName) throws Exception {
-		WebElement element=	ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
-		element.click();
-		ExtentLogger.pass(elementName+ " is  clicked",true);
+	protected void click(By by ,WaitStrategy waitStratergy ,String elementName)  {
+		try {
+			WebElement element=	ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
+			element.click();
+			ExtentLogger.pass(elementName+ " is  clicked",true);
+		}
+		catch (Exception e){
+			e.printStackTrace();
+		}
 	}
 
-	protected void clickForLogout(By by ,WaitStrategy waitStratergy ,String elementName) throws Exception {
+	protected void clickForLogout(By by ,WaitStrategy waitStratergy ,String elementName)  {
 		WebElement element=	ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 		element.click();
 		ExtentLogger.pass(elementName+ " is  clicked");
 	}
 
-	protected void sendKeys(By by, String value,WaitStrategy waitStratergy,String elementName) throws Exception {
+	protected void sendKeys(By by, String value,WaitStrategy waitStratergy,String elementName)  {
 		WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 		element.sendKeys(value);
 		ExtentLogger.pass(value+ " is successufully entered in "+elementName , true );
@@ -37,20 +42,27 @@ public class BasePage {
 
 	protected String getPageTitle() {
 		return DriverManager.getDriver().getTitle();
-
 	}
 
 	protected void mouseHover(By by,WaitStrategy waitStratergy , String elementName) {
-
 		try {
-
 			WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 			action.moveToElement(element).perform();
 			ExtentLogger.pass("Mouse Hover is done on "+elementName, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
 
+	protected void clickAction(By by,WaitStrategy waitStratergy, String elementName) {
+		try {
+			WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
+			if(Objects.nonNull(element))
+			{element.click();}
+			ExtentLogger.pass(elementName+ " is clicked", true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 
@@ -77,7 +89,6 @@ public class BasePage {
 					ExtentLogger.pass(element+" is selected from the list ", true);
 					break;
 				}
-
 			}
 		}
 		catch (Exception e) { e.printStackTrace(); }

@@ -14,25 +14,63 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 	}
 
 
-	
-	
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void myAccountsSummary(Map <String, String > data) throws Exception {
+	public void requestMH(Map <String, String > data) throws Exception {
+		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
+		.getCaptchCode().clickOnLogin();
+		new RetailHomePage().mouseHoverrequest().clickOnchequeBookReqMH().mouseHoverrequest()
+		.clickOnStopRemoveStopOnChequeMH().mouseHoverrequest().clickOndepChequeStatMH().mouseHoverrequest()
+		.clickOnsetStopOnChequeMH().mouseHoverrequest().clickOnremoveStopOnChequeMH().mouseHoverrequest()
+		.clickOngenerateMMIDMH().clickOnLogout().acceptAlert();
+	}
 
-		new RetailHomePage().mouseHoverOnMyAccount().clickOnAccountSummary().clickOnTermDep()
-		.clickOntermLoanAccounts().clickOnClosedIncorpAccount()
+	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
+	@Test
+	public void myAccountsMH(Map <String, String > data) throws Exception {
+		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
+		.getCaptchCode().clickOnLogin();
+		new RetailHomePage().mouseHoverOnMyAccount().mhAccountSumm()
+		.clickOnTermDep().clickOntermLoanAccounts().clickOnClosedIncorpAccount()
+		.mouseHoverOnMyAccount().mhAccountState().clickOnTransactionFor()
+		.clickOnSpecifiedPeriod().clickOnTransactionFor().getCurrentPeriodTxn()
 		.clickOnLogout().acceptAlert();
 	}
 
+	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
+	@Test
+	public void myAccountsClick(Map <String , String > data) throws Exception {
+		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
+		.getCaptchCode().clickOnLogin();
+		new RetailHomePage().clickOnMyAccount().clickOnAccountSummary()
+		.clickOnTermDep().clickOntermLoanAccounts()
+		.clickOnClosedIncorpAccount().clickOnMyAccount().clickOnAccountStatement()
+		.clickOnTransactionFor().clickOnSpecifiedPeriod()
+		.clickOnTransactionFor().getCurrentPeriodTxn()
+		.clickOnLogout().acceptAlert();
+
+	}
+
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void myAccountsStatement(Map <String, String > data) throws Exception {
+	public void eServiceMH(Map<String, String> data) throws Exception {
 		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
 		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().mouseHoverOnMyAccount()
-		.clickOnAccountStatement().clickOnTransactionFor().clickOnSpecifiedPeriod().clickOnLogout().acceptAlert();
+		new RetailHomePage().mhEService().clickOnLinkOfAdhar().mhEService()
+		.clickOnInterestCertificate().mhEService().clickOnCancelNAH().clickOnLogout().acceptAlert();
 	}
+
+	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
+	@Test
+	public void eServiceClick(Map<String, String> data) throws Exception {
+		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
+		.getCaptchCode().clickOnLogin();
+		new RetailHomePage().eEServiceCLick().clickOnLinkOfAdharC()
+		.eEServiceCLick().clickOnCancel().clickOnLogout().acceptAlert();
+	}
+
+
+
 
 }

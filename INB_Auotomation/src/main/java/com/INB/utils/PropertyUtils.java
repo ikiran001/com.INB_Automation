@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import com.INB.constants.FrameworkConstants;
 import com.INB.enums.ConfigProperties;
+import com.INB.exceptions.PropertyFileUsageException;
 
 public class PropertyUtils {
 
@@ -20,15 +21,15 @@ public class PropertyUtils {
 	private static final Map<String, String> CONFIGMAP=new HashMap<String, String>();
 
 	static {
-		try {
-			FileInputStream file=new FileInputStream(FrameworkConstants.getConfigFilePath().trim());
+		try(FileInputStream file=new FileInputStream(FrameworkConstants.getConfigFilePath().trim())) {
+
 			property.load(file);
 
 			for(Object key : property.keySet()) {
 				CONFIGMAP.put(String.valueOf(key), String.valueOf(property.get(key)));
-				
+
 			}
-			
+
 		}
 		catch(FileNotFoundException e) {
 			e.printStackTrace();
@@ -38,10 +39,10 @@ public class PropertyUtils {
 
 		}
 	}
-	
-	public static String get(ConfigProperties key) throws Exception {
+
+	public static String get(ConfigProperties key)  {
 		if(Objects.isNull(key.name().toLowerCase()) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
-			throw new Exception("Property name "+key+" is not available in configuration file ");
+			throw new PropertyFileUsageException("Property name "+key+" is not available in configuration file ");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());
 	}
