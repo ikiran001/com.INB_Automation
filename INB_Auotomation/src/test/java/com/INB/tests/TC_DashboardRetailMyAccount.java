@@ -24,6 +24,16 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		.clickOnsetStopOnChequeMH().mouseHoverrequest().clickOnremoveStopOnChequeMH().mouseHoverrequest()
 		.clickOngenerateMMIDMH().clickOnLogout().acceptAlert();
 	}
+	
+	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
+	@Test
+	public void requestClick(Map<String, String> data) throws Exception {
+		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
+		.getCaptchCode().clickOnLogin();
+		new RetailHomePage().clickOnRequest().clickOnchequeBookReq().clickOnRequest().clickOnStopRemoveStop().clickOnRequest()
+		.clickOnDepChequeState().clickOnRequest().clickOnsetStopOnCheq().clickOnRequest().clickOnRemoveSTopOnCHeque().clickOnRequest()
+		.clickOnGeneraateMMID().clickOnLogout().acceptAlert();
+	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
@@ -48,7 +58,6 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		.clickOnTransactionFor().clickOnSpecifiedPeriod()
 		.clickOnTransactionFor().getCurrentPeriodTxn()
 		.clickOnLogout().acceptAlert();
-
 	}
 
 
@@ -69,6 +78,8 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		new RetailHomePage().eEServiceCLick().clickOnLinkOfAdharC()
 		.eEServiceCLick().clickOnCancel().clickOnLogout().acceptAlert();
 	}
+	
+	
 
 
 

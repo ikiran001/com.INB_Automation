@@ -8,28 +8,36 @@ import com.INB.reports.ExtentLogger;
 public final class RetailHomePage extends BasePage{
 
 	private final By retailLogOut=By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[3]");
+
 	private final By myAccount=By.xpath("//li[@class='dropdown li-active']//a//span");
-	//	private final By mheService=By.xpath("//li[@class='dropdown']//a//span[contains(text(),'E-Services')]");
-	private final By mheService=By.xpath("/html/body/header/nav[2]/div/div/ul/li[2]/a/span");
-	private final By enquiry=By.xpath("/html/body/header/nav[2]/div/div/ul/li[4]/a");
-	private final By accountSummary=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By accountSummaryMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[1]/ul/li[1]");
 	private final By accountStatementMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[1]/ul/li[2]");
+	private final By transactionFor=By.xpath("//*[@id=\"command\"]/div[2]/div/div/input");
+
+	//	private final By mheService=By.xpath("//li[@class='dropdown']//a//span[contains(text(),'E-Services')]");
+	private final By mheService=By.xpath("/html/body/header/nav[2]/div/div/ul/li[2]/a/span");
+	private final By linkOfAdharMH=By.xpath("//a[contains(text(),'Link of Aadhaar with')]");
+	private final By interestCertMH=By.xpath("//a[contains(text(),'Interest Certificate')]");
+	private final By cancelNAHMandateMH=By.xpath("//a[contains(text(),'Cancel NACH')]");
+	
+	private final By enquiry=By.xpath("/html/body/header/nav[2]/div/div/ul/li[4]/a");
+	private final By accountSummary=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
+
 	private final By accountStatement=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
 	private final By termDepoAcc=By.xpath("//*[@id=\"summaryDiv\"]/ul/li[2]/a");
 	private final By termLoanAccount=By.xpath("//*[@id=\"summaryDiv\"]/ul/li[3]/a");
 	private final By closedAccounts=By.xpath("//*[@id=\"summaryDiv\"]/ul/li[4]/a");
-	private final By transactionFor=By.xpath("//*[@id=\"command\"]/div[2]/div/div/input");
+
 	private final By specifiedPeriodList=By.xpath("//ul[contains(@class, 'dropdown-content select-dropdown ')]//li//span");
 	private final By currentPeriod=By.xpath("//*[@id=\"select-options-dc2b5fac-56be-4dbc-8b84-3a3363a01854\"]/li[3]");
 	private final By accountSummaryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By accountStatementClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");	
-	private final By linkOfAdhar=By.xpath("//a[contains(text(),'Link of Aadhaar with')]");
-	private final By interestCert=By.xpath("//a[contains(text(),'Interest Certificate')]");
-	private final By cancelNAHMandate=By.xpath("//a[contains(text(),'Cancel NACH')]");
-	private final By cancelforClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
-	private final By linkOfAdharC=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
+	
+	
+	private final By cancelforCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
+	private final By linkOfAdharCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By cancelNachC=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
+
 	private final By requestMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[3]/a");
 	private final By chequeBookReqMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[3]/ul/li[1]");
 	private final By stopRemoveStopOnCheque=By.xpath("/html/body/header/nav[2]/div/div/ul/li[3]/ul/li[2]");
@@ -37,6 +45,39 @@ public final class RetailHomePage extends BasePage{
 	private final By setStopOnChequeMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[3]/ul/li[4]");
 	private final By removeStopOnChequeMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[3]/ul/li[5]");
 	private final By generateMMIDMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[3]/ul/li[6]");
+
+	private final By chequeBookReqCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
+	private final By stopRemoveStopCL=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
+	private final By depChequeStateCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[3]/a");
+	private final By setStopOnCheqCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[4]/a");
+	private final By removeStopOnChequeCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[5]/a");
+	private final By generateMMIDCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[6]/a");
+
+
+	public RetailHomePage clickOnGeneraateMMID() {
+		click(generateMMIDCl, WaitStrategy.CLICKABLE, "Generate MMID");
+		return this;
+	}
+	public RetailHomePage clickOnRemoveSTopOnCHeque() {
+		click(removeStopOnChequeCl, WaitStrategy.CLICKABLE, "Remove Stop On Cheque");
+		return this;
+	}
+	public RetailHomePage clickOnsetStopOnCheq() {
+		click(setStopOnCheqCl, WaitStrategy.CLICKABLE, "Set Stop On Ceque");
+		return this;
+	}
+	public RetailHomePage clickOnDepChequeState() {
+		click(depChequeStateCl, WaitStrategy.CLICKABLE, "Dep Cheque Status");
+		return this;
+	}
+	public RetailHomePage clickOnStopRemoveStop() {
+		click(stopRemoveStopCL, WaitStrategy.CLICKABLE, "Stop Remove Stop Cheque");
+		return this;
+	}
+	public RetailHomePage clickOnchequeBookReq() {
+		click(chequeBookReqCl, WaitStrategy.CLICKABLE, "Cheque Book Request");
+		return this;
+	}
 
 	public RetailHomePage clickOngenerateMMIDMH() {
 		try {
@@ -77,6 +118,11 @@ public final class RetailHomePage extends BasePage{
 		return this;
 	}
 
+	public RetailHomePage clickOnRequest() {
+		clickAction(requestMH, WaitStrategy.CLICKABLE, "Request ");
+		return this;
+	}
+
 	public RetailHomePage clickOnchequeBookReqMH() {
 		try {
 			click(chequeBookReqMH, WaitStrategy.CLICKABLE, "ChequeBook Request");
@@ -106,7 +152,7 @@ public final class RetailHomePage extends BasePage{
 	}
 	public RetailHomePage clickOnLinkOfAdharC() {
 		try {
-			click(linkOfAdharC, WaitStrategy.VISIBLE, "Link Of Adhar ");
+			click(linkOfAdharCl, WaitStrategy.VISIBLE, "Link Of Adhar ");
 		} catch (Exception e) {
 
 			e.printStackTrace();
@@ -116,7 +162,7 @@ public final class RetailHomePage extends BasePage{
 
 	public RetailHomePage clickOnCancelNAH() {
 		try {
-			click(cancelNAHMandate, WaitStrategy.VISIBLE, "Cancel NAH mandate");
+			click(cancelNAHMandateMH, WaitStrategy.VISIBLE, "Cancel NAH mandate");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -124,7 +170,7 @@ public final class RetailHomePage extends BasePage{
 	}
 	public RetailHomePage clickOnCancel() {
 		try {
-			click(cancelforClick, WaitStrategy.VISIBLE, "Cancel NAH mandate");
+			click(cancelforCl, WaitStrategy.VISIBLE, "Cancel NAH mandate");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -134,7 +180,7 @@ public final class RetailHomePage extends BasePage{
 
 	public RetailHomePage clickOnInterestCertificate() {
 		try {
-			click(interestCert, WaitStrategy.PRESENCE, "Interest Certificate");
+			click(interestCertMH, WaitStrategy.PRESENCE, "Interest Certificate");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -144,7 +190,7 @@ public final class RetailHomePage extends BasePage{
 
 	public RetailHomePage clickOnLinkOfAdhar() {
 		try {
-			click(linkOfAdhar, WaitStrategy.PRESENCE, "Link Of Adhar With Bank Account");
+			click(linkOfAdharMH, WaitStrategy.PRESENCE, "Link Of Adhar With Bank Account");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
