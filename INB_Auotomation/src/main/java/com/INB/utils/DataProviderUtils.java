@@ -19,8 +19,6 @@ public final class DataProviderUtils {
 	             this method will give you all test data whose execution parameter is set as yes
 
 	 * *************************************************************************************************************/
-	
-
 	@DataProvider (parallel=true)
 	public static Object[] getData(Method method) {
 
@@ -38,7 +36,6 @@ public final class DataProviderUtils {
 				smalllist.add(list.get(i));  //get(i)  returns the hashmap<s,s>__
 			}
 		}
-
 
 		return smalllist.toArray();// toArray will give you object array
 	}

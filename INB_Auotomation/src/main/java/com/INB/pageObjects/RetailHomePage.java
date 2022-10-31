@@ -15,11 +15,12 @@ public final class RetailHomePage extends BasePage{
 	private final By transactionFor=By.xpath("//*[@id=\"command\"]/div[2]/div/div/input");
 
 	//	private final By mheService=By.xpath("//li[@class='dropdown']//a//span[contains(text(),'E-Services')]");
+
 	private final By mheService=By.xpath("/html/body/header/nav[2]/div/div/ul/li[2]/a/span");
 	private final By linkOfAdharMH=By.xpath("//a[contains(text(),'Link of Aadhaar with')]");
 	private final By interestCertMH=By.xpath("//a[contains(text(),'Interest Certificate')]");
 	private final By cancelNAHMandateMH=By.xpath("//a[contains(text(),'Cancel NACH')]");
-	
+
 	private final By enquiry=By.xpath("/html/body/header/nav[2]/div/div/ul/li[4]/a");
 	private final By accountSummary=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 
@@ -32,8 +33,7 @@ public final class RetailHomePage extends BasePage{
 	private final By currentPeriod=By.xpath("//*[@id=\"select-options-dc2b5fac-56be-4dbc-8b84-3a3363a01854\"]/li[3]");
 	private final By accountSummaryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By accountStatementClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");	
-	
-	
+
 	private final By cancelforCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
 	private final By linkOfAdharCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By cancelNachC=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
@@ -53,7 +53,44 @@ public final class RetailHomePage extends BasePage{
 	private final By removeStopOnChequeCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[5]/a");
 	private final By generateMMIDCl=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[6]/a");
 
+	private final By enquiryMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[4]/a");
+	private final By loginHistoryMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[4]/ul/li[1]");
+	private final By tdsEnquiryMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[4]/ul/li[2]");
+	private final By tdsEnquirySubmit=By.xpath("/html/body/header/nav[2]/div/div/ul/li[4]/ul/li[3]");
 
+	private final By loginHistoryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
+	private final By tdsEnquiryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
+
+	
+	
+	public RetailHomePage clickOnLoginHistory() {
+		click(loginHistoryClick, WaitStrategy.CLICKABLE, "Login History ");
+		return this;
+	}
+
+	public RetailHomePage clickOnTDSEnquiry() {
+		click(tdsEnquiryClick, WaitStrategy.CLICKABLE, "TDS Enquiry ");
+		return this;
+	}
+
+	public RetailHomePage mouseHoverOnenquiry() {
+		mouseHover(enquiryMH, WaitStrategy.VISIBLE, "Enquiry ");
+		return this;
+	}
+	public RetailHomePage clickOnloginHistoryMH() {
+		click(loginHistoryMH, WaitStrategy.CLICKABLE, "Login History ");
+		return this;
+	}	
+
+	public RetailHomePage clickOnTDSEnquiryMH() {
+		click(tdsEnquiryMH, WaitStrategy.CLICKABLE, "TDS Enquiry ");
+		return this;
+	}
+
+	public RetailHomePage clickOnTDSEnquirySubmitMH() {
+		click(tdsEnquirySubmit, WaitStrategy.CLICKABLE, "TDS Enquiry Submit");
+		return this;
+	}
 	public RetailHomePage clickOnGeneraateMMID() {
 		click(generateMMIDCl, WaitStrategy.CLICKABLE, "Generate MMID");
 		return this;

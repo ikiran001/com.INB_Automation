@@ -3,13 +3,12 @@ package com.INB.listeners;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import org.testng.IMethodInstance;
 import org.testng.IMethodInterceptor;
 import org.testng.ITestContext;
-
 import com.INB.constants.FrameworkConstants;
 import com.INB.utils.ExcelUtils;
+
 
 public class MethodInterceptor implements IMethodInterceptor {
 
@@ -24,7 +23,7 @@ public class MethodInterceptor implements IMethodInterceptor {
 
 		List<Map<String, String>> list=ExcelUtils.getTestDetails(FrameworkConstants.getRunManagerSheet()); // Iterate this list with methods(contains all the testcases)
 		List<IMethodInstance> result= new ArrayList<IMethodInstance>();
-		for(int i=0; i<methods.size() ; i++) { // will provide all the test cases or  methods from test class
+		for(int i=0; i<methods.size() ; i++) {    // will provide all the test cases or  methods from test class
 			for (int j=0 ; j<list.size(); j++) {  // will provide all the methods saved in list(which is derived from excel sheet)
 
 				if(methods.get(i).getMethod().getMethodName().equals(list.get(j).get(FrameworkConstants.getTestCaseName())) && 

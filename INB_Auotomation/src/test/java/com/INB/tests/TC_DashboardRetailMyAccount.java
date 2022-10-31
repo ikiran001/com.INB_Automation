@@ -16,7 +16,25 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void requestMH(Map <String, String > data) throws Exception {
+	public void enquirytClick(Map <String, String> data) throws Exception {
+		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
+		.getCaptchCode().clickOnLogin();
+		new RetailHomePage().clickOnEnquiry().clickOnLoginHistory().clickOnEnquiry()
+		.clickOnTDSEnquiry().clickOnLogout().acceptAlert();
+	}
+
+	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
+	@Test
+	public void enquirytMH(Map <String, String> data) throws Exception {
+		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
+		.getCaptchCode().clickOnLogin();
+		new RetailHomePage().mouseHoverOnenquiry().clickOnloginHistoryMH().mouseHoverOnenquiry().clickOnTDSEnquiryMH()
+		.mouseHoverOnenquiry().clickOnTDSEnquirySubmitMH().clickOnLogout().acceptAlert();
+	}
+
+	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
+	@Test
+	public void requestMH(Map <String, String> data) throws Exception {
 		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
 		.getCaptchCode().clickOnLogin();
 		new RetailHomePage().mouseHoverrequest().clickOnchequeBookReqMH().mouseHoverrequest()
@@ -24,7 +42,7 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		.clickOnsetStopOnChequeMH().mouseHoverrequest().clickOnremoveStopOnChequeMH().mouseHoverrequest()
 		.clickOngenerateMMIDMH().clickOnLogout().acceptAlert();
 	}
-	
+
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
 	public void requestClick(Map<String, String> data) throws Exception {
@@ -37,7 +55,7 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void myAccountsMH(Map <String, String > data) throws Exception {
+	public void myAccountsMH(Map <String, String> data) throws Exception {
 		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
 		.getCaptchCode().clickOnLogin();
 		new RetailHomePage().mouseHoverOnMyAccount().mhAccountSumm()
@@ -49,7 +67,7 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void myAccountsClick(Map <String , String > data) throws Exception {
+	public void myAccountsClick(Map <String , String> data) throws Exception {
 		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
 		.getCaptchCode().clickOnLogin();
 		new RetailHomePage().clickOnMyAccount().clickOnAccountSummary()
@@ -59,7 +77,6 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		.clickOnTransactionFor().getCurrentPeriodTxn()
 		.clickOnLogout().acceptAlert();
 	}
-
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
@@ -78,10 +95,6 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		new RetailHomePage().eEServiceCLick().clickOnLinkOfAdharC()
 		.eEServiceCLick().clickOnCancel().clickOnLogout().acceptAlert();
 	}
-	
-	
-
-
 
 
 }

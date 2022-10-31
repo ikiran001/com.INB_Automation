@@ -10,9 +10,9 @@
     <classes>
       <class name="com.INB.tests.TC_DashboardRetailMyAccount">
         <methods>
+          <include name="enquirytMH" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="eServiceClick" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.INB.tests.TC_DashboardRetailMyAccount -->
     </classes>

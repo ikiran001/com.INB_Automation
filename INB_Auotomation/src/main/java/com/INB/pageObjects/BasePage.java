@@ -58,7 +58,7 @@ public class BasePage {
 		try {
 			WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 			if(Objects.nonNull(element))
-			{element.click();}
+			{action.moveToElement(element).click().perform();}
 			ExtentLogger.pass(elementName+ " is clicked", true);
 		} catch (Exception e) {
 			e.printStackTrace();

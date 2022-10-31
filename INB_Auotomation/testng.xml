@@ -11,7 +11,7 @@
 
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
-        <!--    <class name="com.INB.tests.TC_LoginRetailUser"/> -->
+            <class name="com.INB.tests.TC_LoginRetailUser"/> 
             <class name="com.INB.tests.TC_DashboardRetailMyAccount"/> 
     </classes>
     
