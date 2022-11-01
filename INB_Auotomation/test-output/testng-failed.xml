@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="com.INB.tests.TC_DashboardRetailMyAccount">
+      <class name="com.INB.tests.TC_DashboardQL">
         <methods>
-          <include name="enquirytMH" invocation-numbers="0"/>
+          <include name="quickLinksCheck" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.INB.tests.TC_DashboardRetailMyAccount -->
+      </class> <!-- com.INB.tests.TC_DashboardQL -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

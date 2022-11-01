@@ -13,6 +13,7 @@
     <classes>
             <class name="com.INB.tests.TC_LoginRetailUser"/> 
             <class name="com.INB.tests.TC_DashboardRetailMyAccount"/> 
+            <class name="com.INB.tests.TC_DashboardQL"/>
     </classes>
     
   </test> <!-- Test -->

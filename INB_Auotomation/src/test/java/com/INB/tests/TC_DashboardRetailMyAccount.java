@@ -5,8 +5,9 @@ import java.util.Map;
 import org.testng.annotations.Test;
 
 import com.INB.annotations.FrameworkAnnotations;
+import com.INB.constants.FrameworkConstants;
 import com.INB.enums.CategoryType;
-import com.INB.pageObjects.RetailHomePage;
+import com.INB.pageObjects.RetailHome;
 import com.INB.pageObjects.RetailLogin;
 
 public class TC_DashboardRetailMyAccount extends BaseTest {
@@ -16,84 +17,82 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void enquirytClick(Map <String, String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().clickOnEnquiry().clickOnLoginHistory().clickOnEnquiry()
-		.clickOnTDSEnquiry().clickOnLogout().acceptAlert();
+	public void enquirytClick(Map <String, String> data)   {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().clickOnEnquiry().clickOnLoginHistory().clickOnEnquiry()
+		.clickOnTDSEnquiry()
+		.logoutApp();
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void enquirytMH(Map <String, String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().mouseHoverOnenquiry().clickOnloginHistoryMH().mouseHoverOnenquiry().clickOnTDSEnquiryMH()
-		.mouseHoverOnenquiry().clickOnTDSEnquirySubmitMH().clickOnLogout().acceptAlert();
+	public void enquirytMH(Map <String, String> data)  {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().mouseHoverOnenquiry().clickOnloginHistoryMH().mouseHoverOnenquiry().clickOnTDSEnquiryMH()
+		.mouseHoverOnenquiry().clickOnTDSEnquirySubmitMH()
+		.logoutApp();
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void requestMH(Map <String, String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().mouseHoverrequest().clickOnchequeBookReqMH().mouseHoverrequest()
+	public void requestMH(Map <String, String> data)  {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().mouseHoverrequest().clickOnchequeBookReqMH().mouseHoverrequest()
 		.clickOnStopRemoveStopOnChequeMH().mouseHoverrequest().clickOndepChequeStatMH().mouseHoverrequest()
 		.clickOnsetStopOnChequeMH().mouseHoverrequest().clickOnremoveStopOnChequeMH().mouseHoverrequest()
-		.clickOngenerateMMIDMH().clickOnLogout().acceptAlert();
+		.clickOngenerateMMIDMH()
+		.logoutApp();
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
 	public void requestClick(Map<String, String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().clickOnRequest().clickOnchequeBookReq().clickOnRequest().clickOnStopRemoveStop().clickOnRequest()
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().clickOnRequest().clickOnchequeBookReq().clickOnRequest().clickOnStopRemoveStop().clickOnRequest()
 		.clickOnDepChequeState().clickOnRequest().clickOnsetStopOnCheq().clickOnRequest().clickOnRemoveSTopOnCHeque().clickOnRequest()
-		.clickOnGeneraateMMID().clickOnLogout().acceptAlert();
+		.clickOnGeneraateMMID()
+		.logoutApp();
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void myAccountsMH(Map <String, String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().mouseHoverOnMyAccount().mhAccountSumm()
+	public void myAccountsMH(Map <String, String> data)  {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().mouseHoverOnMyAccount().mhAccountSumm()
 		.clickOnTermDep().clickOntermLoanAccounts().clickOnClosedIncorpAccount()
 		.mouseHoverOnMyAccount().mhAccountState().clickOnTransactionFor()
 		.clickOnSpecifiedPeriod().clickOnTransactionFor().getCurrentPeriodTxn()
-		.clickOnLogout().acceptAlert();
+		.logoutApp();
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void myAccountsClick(Map <String , String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().clickOnMyAccount().clickOnAccountSummary()
+	public void myAccountsClick(Map <String , String> data) {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().clickOnMyAccount().clickOnAccountSummary()
 		.clickOnTermDep().clickOntermLoanAccounts()
 		.clickOnClosedIncorpAccount().clickOnMyAccount().clickOnAccountStatement()
 		.clickOnTransactionFor().clickOnSpecifiedPeriod()
 		.clickOnTransactionFor().getCurrentPeriodTxn()
-		.clickOnLogout().acceptAlert();
+		.logoutApp();
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void eServiceMH(Map<String, String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().mhEService().clickOnLinkOfAdhar().mhEService()
-		.clickOnInterestCertificate().mhEService().clickOnCancelNAH().clickOnLogout().acceptAlert();
+	public void eServiceMH(Map<String, String> data)  {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().mhEService().clickOnLinkOfAdhar().mhEService()
+		.clickOnInterestCertificate().mhEService().clickOnCancelNAH()
+		.logoutApp();
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void eServiceClick(Map<String, String> data) throws Exception {
-		new RetailLogin().enterUserName(data.get("data1")).enterPass(data.get("data2"))
-		.getCaptchCode().clickOnLogin();
-		new RetailHomePage().eEServiceCLick().clickOnLinkOfAdharC()
-		.eEServiceCLick().clickOnCancel().clickOnLogout().acceptAlert();
+	public void eServiceClick(Map<String, String> data)  {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().eEServiceCLick().clickOnLinkOfAdharC()
+		.eEServiceCLick().clickOnCancel()
+		.logoutApp();
 	}
 
 

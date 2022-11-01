@@ -1,206 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-31T14:52:27 IST" name="Suite" finished-at="2022-10-31T14:55:03 IST" duration-ms="156104">
+  <suite started-at="2022-11-01T15:30:19 IST" name="Suite" finished-at="2022-11-01T15:30:40 IST" duration-ms="20776">
     <groups>
     </groups>
-    <test started-at="2022-10-31T14:52:27 IST" name="Test" finished-at="2022-10-31T14:55:03 IST" duration-ms="156104">
-      <class name="com.INB.tests.TC_DashboardRetailMyAccount">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:52:28 IST" name="setUp" finished-at="2022-10-31T14:52:32 IST" duration-ms="3897" status="PASS">
+    <test started-at="2022-11-01T15:30:19 IST" name="Test" finished-at="2022-11-01T15:30:40 IST" duration-ms="20776">
+      <class name="com.INB.tests.TC_DashboardQL">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardQL@47987356]" started-at="2022-11-01T15:30:20 IST" name="setUp" finished-at="2022-11-01T15:30:25 IST" duration-ms="5501" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@4a9486c0]]>
+                <![CDATA[[Ljava.lang.Object;@7f02251]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="eServiceClick(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:52:32 IST" name="eServiceClick" description="checking E-services menu with click method" data-provider="getData" finished-at="2022-10-31T14:52:53 IST" duration-ms="21001" status="PASS">
+        <test-method signature="profileLinksMH(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardQL@47987356]" started-at="2022-11-01T15:30:25 IST" name="profileLinksMH" description="checking profileLinks" data-provider="getData" finished-at="2022-11-01T15:30:39 IST" duration-ms="13517" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Test Case Name=eServiceClick, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
+                <![CDATA[{Test Case Name=profileLinksMH, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- eServiceClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:52:53 IST" name="tearDown" finished-at="2022-10-31T14:52:53 IST" duration-ms="337" status="PASS">
+        </test-method> <!-- profileLinksMH -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardQL@47987356]" started-at="2022-11-01T15:30:39 IST" name="tearDown" finished-at="2022-11-01T15:30:40 IST" duration-ms="429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:52:53 IST" name="setUp" finished-at="2022-10-31T14:52:56 IST" duration-ms="3017" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@4c27d39d]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="eServiceMH(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:52:56 IST" name="eServiceMH" description="checking E-services menu with mouse Hover method" data-provider="getData" finished-at="2022-10-31T14:53:05 IST" duration-ms="8441" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=eServiceMH, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eServiceMH -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:53:05 IST" name="tearDown" finished-at="2022-10-31T14:53:05 IST" duration-ms="330" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:53:05 IST" name="setUp" finished-at="2022-10-31T14:53:09 IST" duration-ms="3853" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@40ee0a22]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="enquirytClick(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:53:09 IST" name="enquirytClick" description="checking Enquiry menu with click  method" data-provider="getData" finished-at="2022-10-31T14:53:19 IST" duration-ms="9665" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=enquirytClick, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enquirytClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:53:19 IST" name="tearDown" finished-at="2022-10-31T14:53:20 IST" duration-ms="373" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:53:20 IST" name="setUp" finished-at="2022-10-31T14:53:23 IST" duration-ms="3683" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@7bde1f3a]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:53:32 IST" name="setUp" finished-at="2022-10-31T14:53:37 IST" duration-ms="4548" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@15923407]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="myAccountsClick(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:53:37 IST" name="myAccountsClick" description="checking all accounts with click method" data-provider="getData" finished-at="2022-10-31T14:54:05 IST" duration-ms="28243" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=myAccountsClick, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myAccountsClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:06 IST" name="tearDown" finished-at="2022-10-31T14:54:06 IST" duration-ms="620" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:06 IST" name="setUp" finished-at="2022-10-31T14:54:10 IST" duration-ms="3897" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@67dba613]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="myAccountsMH(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:10 IST" name="myAccountsMH" description="checking all accounts with  mouse hover method" data-provider="getData" finished-at="2022-10-31T14:54:21 IST" duration-ms="10571" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=myAccountsMH, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myAccountsMH -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:21 IST" name="tearDown" finished-at="2022-10-31T14:54:21 IST" duration-ms="375" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:21 IST" name="setUp" finished-at="2022-10-31T14:54:24 IST" duration-ms="3149" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@57540fd0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="requestClick(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:24 IST" name="requestClick" description="checking Request menu with click  method" data-provider="getData" finished-at="2022-10-31T14:54:46 IST" duration-ms="21255" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=requestClick, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- requestClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:46 IST" name="tearDown" finished-at="2022-10-31T14:54:46 IST" duration-ms="330" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:46 IST" name="setUp" finished-at="2022-10-31T14:54:50 IST" duration-ms="3098" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@5cf8edcf]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="requestMH(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:54:50 IST" name="requestMH" description="checking Request menu with mouse hover method" data-provider="getData" finished-at="2022-10-31T14:55:02 IST" duration-ms="12620" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=requestMH, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- requestMH -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@2fb3536e]" started-at="2022-10-31T14:55:02 IST" name="tearDown" finished-at="2022-10-31T14:55:03 IST" duration-ms="377" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.INB.tests.TC_DashboardRetailMyAccount -->
+      </class> <!-- com.INB.tests.TC_DashboardQL -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

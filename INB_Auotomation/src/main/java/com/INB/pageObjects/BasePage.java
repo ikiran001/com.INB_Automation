@@ -18,14 +18,11 @@ public class BasePage {
 	private final Actions action = new Actions(DriverManager.getDriver());
 
 	protected void click(By by ,WaitStrategy waitStratergy ,String elementName)  {
-		try {
-			WebElement element=	ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
-			element.click();
-			ExtentLogger.pass(elementName+ " is  clicked",true);
-		}
-		catch (Exception e){
-			e.printStackTrace();
-		}
+
+		WebElement element=	ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
+		element.click();
+		ExtentLogger.pass(elementName+ " is  clicked",true);
+
 	}
 
 	protected void clickForLogout(By by ,WaitStrategy waitStratergy ,String elementName)  {
@@ -45,24 +42,20 @@ public class BasePage {
 	}
 
 	protected void mouseHover(By by,WaitStrategy waitStratergy , String elementName) {
-		try {
-			WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
-			action.moveToElement(element).perform();
-			ExtentLogger.pass("Mouse Hover is done on "+elementName, true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+		WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
+		action.moveToElement(element).perform();
+		ExtentLogger.pass("Mouse Hover is done on "+elementName, true);
+
 	}
 
 	protected void clickAction(By by,WaitStrategy waitStratergy, String elementName) {
-		try {
-			WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
-			if(Objects.nonNull(element))
-			{action.moveToElement(element).click().perform();}
-			ExtentLogger.pass(elementName+ " is clicked", true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+		WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
+		if(Objects.nonNull(element))
+		{action.moveToElement(element).click().perform();}
+		ExtentLogger.pass(elementName+ " is clicked", true);
+
 	}
 
 
@@ -71,29 +64,23 @@ public class BasePage {
 		ExplicitWaitFactory.performExlpicitWait(waitStratergy, imageCode);
 		WebElement imageCaptchaCodeValue=DriverManager.getDriver().findElement(imageCode);
 		DriverManager.getDriver().findElement(fieldCaptcha).sendKeys(imageCaptchaCodeValue.getAttribute("value"));
-		try {
-			ExtentLogger.pass(imageCaptchaCodeValue.getAttribute("value")+" successfully sent  to  the Captcha Code" ,true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+		ExtentLogger.pass(imageCaptchaCodeValue.getAttribute("value")+" successfully sent  to  the Captcha Code" ,true);
+
 
 	}
 
 	protected BasePage getRequiredElementFromTheList( WaitStrategy waitStratergy, By by , String element){
-		try
-		{
-			List<WebElement> list=DriverManager.getDriver().findElements(by);
-			for(WebElement wantedList:list) {
-				if(wantedList.getText().contains(element)) {
-					wantedList.click();
-					ExtentLogger.pass(element+" is selected from the list ", true);
-					break;
-				}
+
+		List<WebElement> list=DriverManager.getDriver().findElements(by);
+		for(WebElement wantedList:list) {
+			if(wantedList.getText().contains(element)) {
+				wantedList.click();
+				ExtentLogger.pass(element+" is selected from the list ", true);
+				break;
 			}
 		}
-		catch (Exception e) { e.printStackTrace(); }
-
-		return this; 
+	return this; 
 	}
 
 

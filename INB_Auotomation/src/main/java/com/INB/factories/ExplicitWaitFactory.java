@@ -18,13 +18,15 @@ public final  class ExplicitWaitFactory {
 	public static WebElement performExlpicitWait(WaitStrategy wait, By by) {
 		WebElement element=null;
 		if(wait==WaitStrategy.CLICKABLE) {
+			
 			element=new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitwait())
 					.until(ExpectedConditions.elementToBeClickable(by));
 		}else if(wait==WaitStrategy.PRESENCE){	
+			
 			element=new WebDriverWait(DriverManager.getDriver(),FrameworkConstants.getExplicitwait())
 					.until(ExpectedConditions.presenceOfElementLocated(by));
-		}
-		else if(wait==WaitStrategy.VISIBLE) {
+		}else if(wait==WaitStrategy.VISIBLE) {
+		
 			element=  new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitwait())
 					.until(ExpectedConditions.visibilityOfElementLocated(by));
 		}

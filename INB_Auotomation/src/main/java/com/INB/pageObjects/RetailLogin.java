@@ -13,28 +13,32 @@ public final  class RetailLogin extends BasePage{
 	private final By clickLoginButton=By.xpath("//button[@id='doLogin']");	
 
 
-	public RetailLogin enterUserName(String userName) throws Exception {
+
+	public RetailHome loginToTheApp(String userName,String passWord) {
+		enterUserName(userName).enterPass(passWord).getCaptchCode().clickOnLogin();
+		return new RetailHome();
+	}
+	public RetailLogin enterUserName(String userName) {
 		sendKeys(retailLoginUserName, userName, WaitStrategy.CLICKABLE , "user name");
 
 		return this;
 	}
 
-	public RetailLogin enterPass(String pass) throws Exception {
+	public RetailLogin enterPass(String pass)  {
 		sendKeys(retailLoginPassWord, pass, WaitStrategy.CLICKABLE,"Password");
 
 		return this;																									
 	}
 
 	public RetailLogin getCaptchCode() {
-		
+
 		getCaptcha(imageCaptacha, captchaField , WaitStrategy.PRESENCE);
 		return this;
 	}
 
-	public RetailHomePage clickOnLogin() throws Exception {
+	public RetailHome clickOnLogin()  {
 		click(clickLoginButton , WaitStrategy.CLICKABLE,"LogIn button");
-
-		return new RetailHomePage();
+		return new RetailHome();
 	}
 
 	public String getTitle() {

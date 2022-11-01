@@ -5,7 +5,7 @@ import com.INB.driver.DriverManager;
 import com.INB.enums.WaitStrategy;
 import com.INB.reports.ExtentLogger;
 
-public final class RetailHomePage extends BasePage{
+public final class RetailHome extends BasePage{
 
 	private final By retailLogOut=By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[3]");
 
@@ -61,356 +61,293 @@ public final class RetailHomePage extends BasePage{
 	private final By loginHistoryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By tdsEnquiryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
 
-	
-	
-	public RetailHomePage clickOnLoginHistory() {
+
+
+	public RetailHome clickOnLoginHistory() {
 		click(loginHistoryClick, WaitStrategy.CLICKABLE, "Login History ");
 		return this;
 	}
 
-	public RetailHomePage clickOnTDSEnquiry() {
+	public RetailHome clickOnTDSEnquiry() {
 		click(tdsEnquiryClick, WaitStrategy.CLICKABLE, "TDS Enquiry ");
 		return this;
 	}
 
-	public RetailHomePage mouseHoverOnenquiry() {
+	public RetailHome mouseHoverOnenquiry() {
 		mouseHover(enquiryMH, WaitStrategy.VISIBLE, "Enquiry ");
 		return this;
 	}
-	public RetailHomePage clickOnloginHistoryMH() {
+	public RetailHome clickOnloginHistoryMH() {
 		click(loginHistoryMH, WaitStrategy.CLICKABLE, "Login History ");
 		return this;
 	}	
 
-	public RetailHomePage clickOnTDSEnquiryMH() {
+	public RetailHome clickOnTDSEnquiryMH() {
 		click(tdsEnquiryMH, WaitStrategy.CLICKABLE, "TDS Enquiry ");
 		return this;
 	}
 
-	public RetailHomePage clickOnTDSEnquirySubmitMH() {
+	public RetailHome clickOnTDSEnquirySubmitMH() {
 		click(tdsEnquirySubmit, WaitStrategy.CLICKABLE, "TDS Enquiry Submit");
 		return this;
 	}
-	public RetailHomePage clickOnGeneraateMMID() {
+	public RetailHome clickOnGeneraateMMID() {
 		click(generateMMIDCl, WaitStrategy.CLICKABLE, "Generate MMID");
 		return this;
 	}
-	public RetailHomePage clickOnRemoveSTopOnCHeque() {
+	public RetailHome clickOnRemoveSTopOnCHeque() {
 		click(removeStopOnChequeCl, WaitStrategy.CLICKABLE, "Remove Stop On Cheque");
 		return this;
 	}
-	public RetailHomePage clickOnsetStopOnCheq() {
+	public RetailHome clickOnsetStopOnCheq() {
 		click(setStopOnCheqCl, WaitStrategy.CLICKABLE, "Set Stop On Ceque");
 		return this;
 	}
-	public RetailHomePage clickOnDepChequeState() {
+	public RetailHome clickOnDepChequeState() {
 		click(depChequeStateCl, WaitStrategy.CLICKABLE, "Dep Cheque Status");
 		return this;
 	}
-	public RetailHomePage clickOnStopRemoveStop() {
+	public RetailHome clickOnStopRemoveStop() {
 		click(stopRemoveStopCL, WaitStrategy.CLICKABLE, "Stop Remove Stop Cheque");
 		return this;
 	}
-	public RetailHomePage clickOnchequeBookReq() {
+	public RetailHome clickOnchequeBookReq() {
 		click(chequeBookReqCl, WaitStrategy.CLICKABLE, "Cheque Book Request");
 		return this;
 	}
 
-	public RetailHomePage clickOngenerateMMIDMH() {
-		try {
-			click(generateMMIDMH, WaitStrategy.CLICKABLE, "Generate MMID");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOngenerateMMIDMH() {
+
+		click(generateMMIDMH, WaitStrategy.CLICKABLE, "Generate MMID");
+
 		return this;
 	}
-	public RetailHomePage clickOnsetStopOnChequeMH() {
-		try {
-			click(setStopOnChequeMH, WaitStrategy.CLICKABLE, "Set Stop on cheque");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnsetStopOnChequeMH() {
+
+		click(setStopOnChequeMH, WaitStrategy.CLICKABLE, "Set Stop on cheque");
+
 		return this;
 	}
 
-	public RetailHomePage clickOndepChequeStatMH() {
-		try {
-			click(depChequeStatMH, WaitStrategy.CLICKABLE, "Depo cheque statement");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOndepChequeStatMH() {
+
+		click(depChequeStatMH, WaitStrategy.CLICKABLE, "Depo cheque statement");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnremoveStopOnChequeMH() {
-		try {
-			click(removeStopOnChequeMH, WaitStrategy.CLICKABLE, "Remove Stop On cheque");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnremoveStopOnChequeMH() {
+
+		click(removeStopOnChequeMH, WaitStrategy.CLICKABLE, "Remove Stop On cheque");
+
 		return this;
 	}
-	public RetailHomePage mouseHoverrequest() {
+	public RetailHome mouseHoverrequest() {
 		mouseHover(requestMH, WaitStrategy.VISIBLE, "Request ");
 		return this;
 	}
 
-	public RetailHomePage clickOnRequest() {
+	public RetailHome clickOnRequest() {
 		clickAction(requestMH, WaitStrategy.CLICKABLE, "Request ");
 		return this;
 	}
 
-	public RetailHomePage clickOnchequeBookReqMH() {
-		try {
-			click(chequeBookReqMH, WaitStrategy.CLICKABLE, "ChequeBook Request");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnchequeBookReqMH() {
+
+		click(chequeBookReqMH, WaitStrategy.CLICKABLE, "ChequeBook Request");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnStopRemoveStopOnChequeMH() {
-		try {
-			click(stopRemoveStopOnCheque, WaitStrategy.CLICKABLE, "Set/Remove Stop");
-		} catch (Exception e) {
+	public RetailHome clickOnStopRemoveStopOnChequeMH() {
 
-			e.printStackTrace();
-		}
+		click(stopRemoveStopOnCheque, WaitStrategy.CLICKABLE, "Set/Remove Stop");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnCancelNACHC() {
-		try {
-			click(cancelNachC, WaitStrategy.VISIBLE, "Cancel NACH");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnCancelNACHC() {
+
+		click(cancelNachC, WaitStrategy.VISIBLE, "Cancel NACH");
+
 		return this;
 	}
-	public RetailHomePage clickOnLinkOfAdharC() {
-		try {
-			click(linkOfAdharCl, WaitStrategy.VISIBLE, "Link Of Adhar ");
-		} catch (Exception e) {
+	public RetailHome clickOnLinkOfAdharC() {
 
-			e.printStackTrace();
-		}
+		click(linkOfAdharCl, WaitStrategy.VISIBLE, "Link Of Adhar ");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnCancelNAH() {
-		try {
-			click(cancelNAHMandateMH, WaitStrategy.VISIBLE, "Cancel NAH mandate");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnCancelNAH() {
+
+		click(cancelNAHMandateMH, WaitStrategy.VISIBLE, "Cancel NAH mandate");
+
 		return this;
 	}
-	public RetailHomePage clickOnCancel() {
-		try {
-			click(cancelforCl, WaitStrategy.VISIBLE, "Cancel NAH mandate");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnCancel() {
+
+		click(cancelforCl, WaitStrategy.VISIBLE, "Cancel NAH mandate");
+
 		return this;
 	}
 
 
-	public RetailHomePage clickOnInterestCertificate() {
-		try {
-			click(interestCertMH, WaitStrategy.PRESENCE, "Interest Certificate");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnInterestCertificate() {
+
+		click(interestCertMH, WaitStrategy.PRESENCE, "Interest Certificate");
+
 		return this;
 	}
 
 
-	public RetailHomePage clickOnLinkOfAdhar() {
-		try {
-			click(linkOfAdharMH, WaitStrategy.PRESENCE, "Link Of Adhar With Bank Account");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnLinkOfAdhar() {
+
+		click(linkOfAdharMH, WaitStrategy.PRESENCE, "Link Of Adhar With Bank Account");
+
 		return this;
 	}
 
 
-	public RetailHomePage mhEService() {
+	public RetailHome mhEService() {
 		mouseHover(mheService, WaitStrategy.PRESENCE, "E-Services");
 		return this;
 	}
 
-	public RetailHomePage eEServiceCLick() {
-		try {
-			clickAction(mheService, WaitStrategy.CLICKABLE, "E-Services");
+	public RetailHome eEServiceCLick() {
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		clickAction(mheService, WaitStrategy.CLICKABLE, "E-Services");
+
+
 		return this;
 	}
 
 
-	public RetailHomePage  mhAccountState() {
-		try {
-			click(accountStatementMH, WaitStrategy.PRESENCE, "Account Statement");
-		} catch (Exception e) {
+	public RetailHome  mhAccountState() {
 
-			e.printStackTrace();
-		}
+		click(accountStatementMH, WaitStrategy.PRESENCE, "Account Statement");
+
 		return this;
 	}
 
-	public RetailHomePage mhAccountSumm() {
-		try {
-			click(accountSummaryMH, WaitStrategy.PRESENCE, "Account Summary");
-		} catch (Exception e) {
+	public RetailHome mhAccountSumm() {
 
-			e.printStackTrace();
-		}
+		click(accountSummaryMH, WaitStrategy.PRESENCE, "Account Summary");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnAccSumm() {
-		try {
-			click(accountSummaryClick, WaitStrategy.VISIBLE, "Account Summary");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnAccSumm() {
+
+		click(accountSummaryClick, WaitStrategy.VISIBLE, "Account Summary");
+
 		return this;  	
 	}
 
-	public RetailHomePage clickOnAccState() {
-		try {
-			click(accountStatementClick, WaitStrategy.VISIBLE, "Account Statement ");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnAccState() {
+
+		click(accountStatementClick, WaitStrategy.VISIBLE, "Account Statement ");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnMyAccount() {
-		try {
-			clickAction(myAccount, WaitStrategy.CLICKABLE, "My Account ");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnMyAccount () {
+		clickAction(myAccount, WaitStrategy.CLICKABLE, "My Account ");
+
 		return this;
 	}
-	public RetailHomePage getCurrentPeriodTxn() {
+	public RetailHome getCurrentPeriodTxn() {
 		getRequiredElementFromTheList(WaitStrategy.VISIBLE, specifiedPeriodList, "Current");
 		return this;
 	}
 
-	public RetailHomePage clickOnSpecifiedPeriod() {
+	public RetailHome clickOnSpecifiedPeriod() {
 
 		getRequiredElementFromTheList(WaitStrategy.VISIBLE, specifiedPeriodList,"Specified");
 
 
 		return this;
 	}
-	public RetailHomePage clickOnTransactionFor() {
-		try {
-			click(transactionFor, WaitStrategy.VISIBLE, "Transaction for ");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnTransactionFor() {
+
+		click(transactionFor, WaitStrategy.VISIBLE, "Transaction for ");
+
 		return this;
 	}
 
 
-	public RetailHomePage clickOnCurrentPeriod() {
-		try {
-			click(currentPeriod, WaitStrategy.VISIBLE, "Current Period");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnCurrentPeriod() {
+
+		click(currentPeriod, WaitStrategy.VISIBLE, "Current Period");
+
 		return this;
 	}
-	public RetailHomePage clickOnEnquiry() {
-		try {
-			click(enquiry, WaitStrategy.VISIBLE, "Enquiry ");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnEnquiry() {
+
+		click(enquiry, WaitStrategy.VISIBLE, "Enquiry ");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnEServices() {
-		try {
-			click(mheService, WaitStrategy.VISIBLE, "EServices");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnEServices() {
+
+		click(mheService, WaitStrategy.VISIBLE, "EServices");
+
 		return this;
 	}
-	public RetailHomePage clickOnAccountStatement() {
-		try {
-			click(accountStatement, WaitStrategy.VISIBLE, "Account statement");
-		} catch (Exception e) {
+	public RetailHome clickOnAccountStatement() {
 
-			e.printStackTrace();
-		}
+		click(accountStatement, WaitStrategy.VISIBLE, "Account statement");
+
 		return this;
 	}
 
-	public RetailHomePage clickOnTermDep() {
-		try {
-			click(termDepoAcc, WaitStrategy.VISIBLE, "Term Deposite/other Account");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnTermDep() {
+
+		click(termDepoAcc, WaitStrategy.VISIBLE, "Term Deposite/other Account");
+
 		return this;
 	}
-	public RetailHomePage clickOntermLoanAccounts() {
-		try {
-			click(termLoanAccount, WaitStrategy.VISIBLE, "Term Loan Account");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOntermLoanAccounts() {
+
+		click(termLoanAccount, WaitStrategy.VISIBLE, "Term Loan Account");
+
 		return this;
 	}
 
 
-	public RetailHomePage clickOnClosedIncorpAccount() {
-		try {
-			click(closedAccounts, WaitStrategy.VISIBLE, "Closed Accounts");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnClosedIncorpAccount() {
+
+		click(closedAccounts, WaitStrategy.VISIBLE, "Closed Accounts");
+
 		return this;
 	}
 
 
-	public RetailHomePage clickOnLogout() throws Exception {
+	public RetailLogin logoutApp()  {
 
 		clickForLogout(retailLogOut,WaitStrategy.VISIBLE ,"Logout button" );
-
-		return this;
+		acceptAlert();
+		return new RetailLogin();
 	}
 
-	public RetailHomePage mouseHoverOnMyAccount() {
+	public RetailHome mouseHoverOnMyAccount() {
 		mouseHover(myAccount, WaitStrategy.PRESENCE ,"My Account");
 		return this;
 	}
 
-	public RetailHomePage clickOnAccountSummary() {
-		try {
-			click(accountSummary, WaitStrategy.PRESENCE, "Account Summary");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public RetailHome clickOnAccountSummary() {
+
+		click(accountSummary, WaitStrategy.PRESENCE, "Account Summary");
+
 		return this;
 	}
 
-	public RetailLogin  acceptAlert() {
-		try {
-			DriverManager.getDriver().switchTo().alert().accept();
-			ExtentLogger.pass(" Alert accepted successfully ");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return new RetailLogin();
+	public void  acceptAlert() {
+
+		DriverManager.getDriver().switchTo().alert().accept();
+		ExtentLogger.pass(" Alert accepted successfully ");
+		
 	}
 
 }

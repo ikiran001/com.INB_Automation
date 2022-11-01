@@ -1,5 +1,7 @@
 package com.INB.constants;
 
+import java.util.Map;
+
 import com.INB.enums.ConfigProperties;
 import com.INB.utils.PropertyUtils;
 
@@ -25,7 +27,25 @@ public final class FrameworkConstants {                          // final= not t
 	private static final String PRIORITY="Priority";
 	private static final String COUNT="Count";
 	private static final String TESTDESCRIPTION="Test Description";
+	private static final String USERNAME="";
+	private static final String PASSWORD="";
 
+
+	public static String getPassword(Map<String , String> data) {
+
+		if(PASSWORD.isEmpty()) {
+			return data.get("data2");
+		}
+		return "";
+	}
+
+
+	public static String getUserName(Map<String , String> data) {
+		if(USERNAME.isEmpty()) {
+			return data.get("data1");
+		}
+		return "";
+	}
 
 
 	public static String getTestDescription() {
@@ -40,6 +60,8 @@ public final class FrameworkConstants {                          // final= not t
 			return EXTENTREPORFOLDERTPATH+"/index.html";
 		}
 	}
+
+
 	public static String getExtentReportFilePath()  {
 		if(extentReportFilePath.isEmpty()) {
 			extentReportFilePath=createEtentReportPath();
