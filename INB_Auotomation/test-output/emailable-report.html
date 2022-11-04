@@ -9,10 +9,88 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">20,776</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">148,775</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.INB.tests.TC_DashboardQL</td><td><a href="#m0">profileLinksMH</a></td><td rowspan="1">1667296825743</td><td rowspan="1">13517</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.INB.tests.TC_DashboardQL</td><td><a href="#m0">profileLinksMH</a></td><td rowspan="1">1667539148945</td><td rowspan="1">5661</td></tr><tr class="failedeven"><td><a href="#m1">quickLinksCheck</a></td><td rowspan="1">1667539160021</td><td rowspan="1">13675</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.INB.tests.TC_DashboardQL</td><td><a href="#m2">profileLinksClick</a></td><td rowspan="1">1667539130555</td><td rowspan="1">13756</td></tr><tr class="passedodd"><td rowspan="6">com.INB.tests.TC_DashboardRetailMyAccount</td><td><a href="#m3">eServiceClick</a></td><td rowspan="1">1667539031608</td><td rowspan="1">8828</td></tr><tr class="passedodd"><td><a href="#m4">eServiceMH</a></td><td rowspan="1">1667539044708</td><td rowspan="1">8725</td></tr><tr class="passedodd"><td><a href="#m5">myAccountsClick</a></td><td rowspan="1">1667539057349</td><td rowspan="1">13673</td></tr><tr class="passedodd"><td><a href="#m6">myAccountsMH</a></td><td rowspan="1">1667539075996</td><td rowspan="1">11249</td></tr><tr class="passedodd"><td><a href="#m7">requestClick</a></td><td rowspan="1">1667539091092</td><td rowspan="1">19099</td></tr><tr class="passedodd"><td><a href="#m8">requestMH</a></td><td rowspan="1">1667539114029</td><td rowspan="1">12581</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.INB.tests.TC_DashboardQL#profileLinksMH</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=profileLinksMH, data1=spcbtest, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.INB.tests.TC_DashboardQL#profileLinksMH</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=profileLinksMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;a href=&quot;/OnlineSPCB/userChangeProfilePassword&quot; class=&quot; waves-effect waves-light&quot;&gt;...&lt;/a&gt; is not clickable at point (102, 20). Other element would receive the click: &lt;img style=&quot;max-width: 100% !important;&quot; class=&quot;img-fluid&quot; id=&quot;my-image&quot; src=&quot;/OnlineSPCB/resources/images/LOGO/SPCB_Logo.png&quot; alt=&quot;LOGO&quot;&gt;
+  (Session info: chrome=107.0.5304.88)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 107.0.5304.88, webStorageEnabled: true}
+Session ID: 03568eaa877821efe8937171567979e6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.INB.pageObjects.BasePage.click(BasePage.java:24)
+	at com.INB.pageObjects.RetailQuickLinks.clickOnChangeProfilePass(RetailQuickLinks.java:66)
+	at com.INB.tests.TC_DashboardQL.profileLinksMH(TC_DashboardQL.java:41)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.INB.tests.TC_DashboardQL#quickLinksCheck</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=quickLinksCheck, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div/div/div[2]/ul/li[1]/a (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:23)
+	at com.INB.pageObjects.BasePage.clickAction(BasePage.java:52)
+	at com.INB.pageObjects.RetailQuickLinks.clickOnqlMyAccount(RetailQuickLinks.java:80)
+	at com.INB.tests.TC_DashboardQL.quickLinksCheck(TC_DashboardQL.java:27)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/section/div/div/div[2]/ul/li[1]/a&quot;}
+  (Session info: chrome=107.0.5304.88)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 107.0.5304.88, webStorageEnabled: true}
+Session ID: d6e269ea4e17469f47009ce567a832d3
+*** Element info: {Using=xpath, value=/html/body/section/div/div/div[2]/ul/li[1]/a}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 19 more
+... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.INB.tests.TC_DashboardQL#profileLinksClick</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=profileLinksClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.INB.tests.TC_DashboardRetailMyAccount#eServiceClick</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.INB.tests.TC_DashboardRetailMyAccount#eServiceMH</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.INB.tests.TC_DashboardRetailMyAccount#myAccountsClick</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.INB.tests.TC_DashboardRetailMyAccount#myAccountsMH</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.INB.tests.TC_DashboardRetailMyAccount#requestClick</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=requestClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.INB.tests.TC_DashboardRetailMyAccount#requestMH</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

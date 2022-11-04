@@ -6,6 +6,7 @@ import java.util.Objects;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -16,9 +17,9 @@ import com.INB.reports.ExtentLogger;
 
 public class BasePage {
 	private final Actions action = new Actions(DriverManager.getDriver());
+	
 
 	protected void click(By by ,WaitStrategy waitStratergy ,String elementName)  {
-
 		WebElement element=	ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 		element.click();
 		ExtentLogger.pass(elementName+ " is  clicked",true);
@@ -42,36 +43,26 @@ public class BasePage {
 	}
 
 	protected void mouseHover(By by,WaitStrategy waitStratergy , String elementName) {
-
 		WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
 		action.moveToElement(element).perform();
 		ExtentLogger.pass("Mouse Hover is done on "+elementName, true);
-
 	}
 
-	protected void clickAction(By by,WaitStrategy waitStratergy, String elementName) {
-
+	protected void clickAction(By by,WaitStrategy waitStratergy, String elementName ,String title) {
 		WebElement element=ExplicitWaitFactory.performExlpicitWait(waitStratergy, by);
-		if(Objects.nonNull(element))
-		{action.moveToElement(element).click().perform();}
+		while(!(getPageTitle().contains(title))) {element.click();}
 		ExtentLogger.pass(elementName+ " is clicked", true);
-
 	}
-
 
 	protected void getCaptcha(By imageCode , By fieldCaptcha , WaitStrategy waitStratergy ) {
 		ExplicitWaitFactory.performExlpicitWait(waitStratergy, fieldCaptcha);
 		ExplicitWaitFactory.performExlpicitWait(waitStratergy, imageCode);
 		WebElement imageCaptchaCodeValue=DriverManager.getDriver().findElement(imageCode);
 		DriverManager.getDriver().findElement(fieldCaptcha).sendKeys(imageCaptchaCodeValue.getAttribute("value"));
-
 		ExtentLogger.pass(imageCaptchaCodeValue.getAttribute("value")+" successfully sent  to  the Captcha Code" ,true);
-
-
 	}
 
-	protected BasePage getRequiredElementFromTheList( WaitStrategy waitStratergy, By by , String element){
-
+	protected BasePage getRequiredElementFromTheList( By by , String element){
 		List<WebElement> list=DriverManager.getDriver().findElements(by);
 		for(WebElement wantedList:list) {
 			if(wantedList.getText().contains(element)) {
@@ -80,14 +71,12 @@ public class BasePage {
 				break;
 			}
 		}
-	return this; 
+		return this; 
 	}
 
-
 	protected BasePage getWindowHandle() {
-
 		Set<String> windowHandles = DriverManager.getDriver().getWindowHandles();
-		List<String> windowHandlesList = new ArrayList<String>(windowHandles);
+		List<String> windowHandlesList = new ArrayList<>(windowHandles);
 		System.out.println(windowHandlesList.size());
 		for(String curr:windowHandlesList){
 			System.out.println(curr+" "+windowHandlesList.size()+windowHandlesList.get(0));
@@ -96,6 +85,7 @@ public class BasePage {
 		return this;
 	}
 
+	
 
 }
 

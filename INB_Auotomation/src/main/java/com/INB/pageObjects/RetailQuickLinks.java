@@ -18,13 +18,43 @@ public class RetailQuickLinks extends BasePage{
 	private final By resetProfilePassMH=By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[2]/ul/li[3]/a");
 	private final By myProfileMH=By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[2]/ul/li[4]/a");
 
+	private final By profileNameCL=By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[2]/a");
+	private final By changeLoginPassCL=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
+	private final By changeProfilePassCL=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
+	private final By forgotProfilePassCL=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[3]/a");
+	private final By myProfileCL=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[4]/a");
 
+	
+	
+	public RetailHome clickOnMyProfileCL() {
+		clickAction(myProfileCL, WaitStrategy.CLICKABLE, "My Profile ", "My Profile");
+		return new RetailHome();
+	}
+
+	public RetailQuickLinks clickOnForgotPassCL() {
+		clickAction(forgotProfilePassCL, WaitStrategy.CLICKABLE, "Forgot Password", "Change Password");
+		return this;
+	}	
+	public RetailQuickLinks clickOnChangeProfilePassCL() {
+		clickAction(changeProfilePassCL, WaitStrategy.CLICKABLE, "Profile Pass", "Change Password");
+		return this;
+	}
+
+	public RetailQuickLinks clickOnChangeLoginPassCL() {
+		clickAction(changeLoginPassCL, WaitStrategy.CLICKABLE, "Change Password", "Change Password");
+		return  this;
+	}
+
+	public RetailQuickLinks clickOnProfileName() {
+		clickAction(profileNameCL, WaitStrategy.CLICKABLE, "Profile Name", "Profile");
+		return this;
+	}
 
 
 	public RetailQuickLinks mouseHoverProfileName() {
 		mouseHover(profileNameMH, WaitStrategy.PRESENCE, "Profile Name");
 		return this;
-		
+
 	}
 
 	public RetailQuickLinks clickOnchangeLoginPass() {
@@ -47,7 +77,7 @@ public class RetailQuickLinks extends BasePage{
 		return new RetailHome();
 	}
 	public RetailQuickLinks clickOnqlMyAccount() {
-		click(qlMyAccount, WaitStrategy.CLICKABLE, "My Account ");
+		clickAction(qlMyAccount, WaitStrategy.CLICKABLE, "My Account ","My Account");
 		return this;
 	}
 

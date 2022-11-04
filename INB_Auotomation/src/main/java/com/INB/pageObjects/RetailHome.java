@@ -10,9 +10,9 @@ public final class RetailHome extends BasePage{
 	private final By retailLogOut=By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[3]");
 
 	private final By myAccount=By.xpath("//li[@class='dropdown li-active']//a//span");
-	private final By accountSummaryMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[1]/ul/li[1]");
-	private final By accountStatementMH=By.xpath("/html/body/header/nav[2]/div/div/ul/li[1]/ul/li[2]");
-	private final By transactionFor=By.xpath("//*[@id=\"command\"]/div[2]/div/div/input");
+	private final By accountSummaryMH=By.xpath("//li[@class='dropdown li-active']//ul//li//a[contains(text(), 'Account Summary')]");
+	private final By accountStatementMH=By.xpath("//li[@class='dropdown li-active']//ul//li//a[contains(text(), 'Account Statement')]");
+	private final By transactionFor=By.xpath("//div//input[@class='select-dropdown' and @value='select']");
 
 	//	private final By mheService=By.xpath("//li[@class='dropdown']//a//span[contains(text(),'E-Services')]");
 
@@ -29,7 +29,7 @@ public final class RetailHome extends BasePage{
 	private final By termLoanAccount=By.xpath("//*[@id=\"summaryDiv\"]/ul/li[3]/a");
 	private final By closedAccounts=By.xpath("//*[@id=\"summaryDiv\"]/ul/li[4]/a");
 
-	private final By specifiedPeriodList=By.xpath("//ul[contains(@class, 'dropdown-content select-dropdown ')]//li//span");
+	private final By specifiedPeriodList=By.xpath("//ul[contains(@class, 'dropdown-content select-dropdown ')]//li//span");//xpath till span so that you will get all the elements with same xpath
 	private final By currentPeriod=By.xpath("//*[@id=\"select-options-dc2b5fac-56be-4dbc-8b84-3a3363a01854\"]/li[3]");
 	private final By accountSummaryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By accountStatementClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");	
@@ -61,6 +61,15 @@ public final class RetailHome extends BasePage{
 	private final By loginHistoryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[1]/a");
 	private final By tdsEnquiryClick=By.xpath("/html/body/section/div/div/div[1]/div[2]/div/div[2]/a");
 
+	private final By accountNumbers=By.xpath("//ul[@class='dropdown-content select-dropdown ']//li//span");
+	private final By downloadStat=By.xpath("//*[@id=\"display\"]");
+	private final By accountNumbersTab=By.xpath("//*[@id=\"command\"]/div[1]/div/div/input");
+
+
+	public RetailHome clickOnAccNumberTab() {
+		click(accountNumbersTab, WaitStrategy.CLICKABLE, "Account Numbers Tab");
+		return this;
+	}
 
 
 	public RetailHome clickOnLoginHistory() {
@@ -148,7 +157,7 @@ public final class RetailHome extends BasePage{
 	}
 
 	public RetailHome clickOnRequest() {
-		clickAction(requestMH, WaitStrategy.CLICKABLE, "Request ");
+		clickAction(requestMH, WaitStrategy.CLICKABLE, "Request " , "Requests");
 		return this;
 	}
 
@@ -173,38 +182,28 @@ public final class RetailHome extends BasePage{
 		return this;
 	}
 	public RetailHome clickOnLinkOfAdharC() {
-
 		click(linkOfAdharCl, WaitStrategy.VISIBLE, "Link Of Adhar ");
-
 		return this;
 	}
 
 	public RetailHome clickOnCancelNAH() {
-
 		click(cancelNAHMandateMH, WaitStrategy.VISIBLE, "Cancel NAH mandate");
-
 		return this;
 	}
 	public RetailHome clickOnCancel() {
-
 		click(cancelforCl, WaitStrategy.VISIBLE, "Cancel NAH mandate");
-
 		return this;
 	}
 
 
 	public RetailHome clickOnInterestCertificate() {
-
 		click(interestCertMH, WaitStrategy.PRESENCE, "Interest Certificate");
-
 		return this;
 	}
 
 
 	public RetailHome clickOnLinkOfAdhar() {
-
 		click(linkOfAdharMH, WaitStrategy.PRESENCE, "Link Of Adhar With Bank Account");
-
 		return this;
 	}
 
@@ -215,117 +214,84 @@ public final class RetailHome extends BasePage{
 	}
 
 	public RetailHome eEServiceCLick() {
-
-		clickAction(mheService, WaitStrategy.CLICKABLE, "E-Services");
-
-
+		clickAction(mheService, WaitStrategy.CLICKABLE, "E-Services","E-Services");
 		return this;
 	}
 
 
 	public RetailHome  mhAccountState() {
-
 		click(accountStatementMH, WaitStrategy.PRESENCE, "Account Statement");
-
 		return this;
 	}
 
 	public RetailHome mhAccountSumm() {
-
 		click(accountSummaryMH, WaitStrategy.PRESENCE, "Account Summary");
-
 		return this;
 	}
 
 	public RetailHome clickOnAccSumm() {
-
 		click(accountSummaryClick, WaitStrategy.VISIBLE, "Account Summary");
-
 		return this;  	
 	}
 
 	public RetailHome clickOnAccState() {
-
 		click(accountStatementClick, WaitStrategy.VISIBLE, "Account Statement ");
-
 		return this;
 	}
 
 	public RetailHome clickOnMyAccount () {
-		clickAction(myAccount, WaitStrategy.CLICKABLE, "My Account ");
-
+		clickAction(myAccount, WaitStrategy.CLICKABLE, "My Account " , "My Account");
 		return this;
 	}
 	public RetailHome getCurrentPeriodTxn() {
-		getRequiredElementFromTheList(WaitStrategy.VISIBLE, specifiedPeriodList, "Current");
+		getRequiredElementFromTheList( specifiedPeriodList, "Current");
 		return this;
 	}
 
 	public RetailHome clickOnSpecifiedPeriod() {
-
-		getRequiredElementFromTheList(WaitStrategy.VISIBLE, specifiedPeriodList,"Specified");
-
-
+		getRequiredElementFromTheList( specifiedPeriodList,"Specified");
 		return this;
 	}
 	public RetailHome clickOnTransactionFor() {
-
-		click(transactionFor, WaitStrategy.VISIBLE, "Transaction for ");
-
+		click(transactionFor, WaitStrategy.CLICKABLE, "Transaction for ");
 		return this;
 	}
 
-
 	public RetailHome clickOnCurrentPeriod() {
-
 		click(currentPeriod, WaitStrategy.VISIBLE, "Current Period");
-
 		return this;
 	}
 	public RetailHome clickOnEnquiry() {
-
-		click(enquiry, WaitStrategy.VISIBLE, "Enquiry ");
-
+		clickAction(enquiry, WaitStrategy.VISIBLE, "Enquiry " ,"Enquiry");
 		return this;
 	}
 
 	public RetailHome clickOnEServices() {
-
 		click(mheService, WaitStrategy.VISIBLE, "EServices");
-
 		return this;
 	}
 	public RetailHome clickOnAccountStatement() {
-
 		click(accountStatement, WaitStrategy.VISIBLE, "Account statement");
-
 		return this;
 	}
 
 	public RetailHome clickOnTermDep() {
-
 		click(termDepoAcc, WaitStrategy.VISIBLE, "Term Deposite/other Account");
-
 		return this;
 	}
 	public RetailHome clickOntermLoanAccounts() {
-
 		click(termLoanAccount, WaitStrategy.VISIBLE, "Term Loan Account");
-
 		return this;
 	}
 
 
 	public RetailHome clickOnClosedIncorpAccount() {
-
 		click(closedAccounts, WaitStrategy.VISIBLE, "Closed Accounts");
-
 		return this;
 	}
 
 
 	public RetailLogin logoutApp()  {
-
 		clickForLogout(retailLogOut,WaitStrategy.VISIBLE ,"Logout button" );
 		acceptAlert();
 		return new RetailLogin();
@@ -337,17 +303,14 @@ public final class RetailHome extends BasePage{
 	}
 
 	public RetailHome clickOnAccountSummary() {
-
 		click(accountSummary, WaitStrategy.PRESENCE, "Account Summary");
-
 		return this;
 	}
 
 	public void  acceptAlert() {
-
 		DriverManager.getDriver().switchTo().alert().accept();
 		ExtentLogger.pass(" Alert accepted successfully ");
-		
+
 	}
 
 }

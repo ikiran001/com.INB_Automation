@@ -11,6 +11,7 @@ import com.INB.enums.CategoryType;
 
 @Retention(RUNTIME)
 @Target(METHOD)
+
 public @interface FrameworkAnnotations {
 	public String [] author();
 	public CategoryType [] categories();

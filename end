@@ -1,0 +1,65 @@
+[33mcommit 8c9478606e6eb712082a1a82a2a1b391c7441b70[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Tue Nov 1 15:40:33 2022 +0530
+
+    addition of test cases
+
+[33mcommit 2700beed1491d53f8ad241350591c281e6d2bfaf[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Mon Oct 31 15:14:36 2022 +0530
+
+    test case addition
+
+[33mcommit c8e74cf4846c305892cfa7672f67aeccd1614443[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Fri Oct 28 17:27:59 2022 +0530
+
+    test case addition
+
+[33mcommit bac98803ea278eb9838693a9370089d7e3393c59[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Fri Oct 28 15:12:50 2022 +0530
+
+    Framework Exception addition
+
+[33mcommit 884defdf261eb0db85b1d3987695e75d9d7d933b[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Thu Oct 20 17:59:33 2022 +0530
+
+    Test case updated 20-10
+
+[33mcommit 81db9a725a883b4d89a5e73cdc346df765202779[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Tue Oct 18 16:37:09 2022 +0530
+
+    little changes done in framework constants files 18-10
+
+[33mcommit 3bd12b5c45f447a4ff11e950cda1f2a72f0c2ed2[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Tue Oct 18 11:25:39 2022 +0530
+
+    Custom Annotations Implementation in framework- kiran jadhav-18/10/22
+
+[33mcommit 6f92c744d61fb4244ccc454909825f6f298f29ac[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Mon Oct 17 12:31:26 2022 +0530
+
+    multi browser testing code updated
+
+[33mcommit 3e26400cc3ba1d0a2b54f3cc0667f9d67de910e0[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Fri Oct 14 17:25:15 2022 +0530
+
+    created frameworkconstants
+
+[33mcommit dd4c4cd3aa078a2a4c055cea62a993271ef7b37a[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Fri Oct 14 15:15:51 2022 +0530
+
+    DataProvider iteration , one data provider for all test cases
+
+[33mcommit 2481252432ef7d51c9ce4294fef8ad9a090a9035[m
+Author: KiranJadhav <kiran.jadhav1993@gmail.com>
+Date:   Fri Oct 14 10:02:12 2022 +0530
+
+    INB AUtomation project

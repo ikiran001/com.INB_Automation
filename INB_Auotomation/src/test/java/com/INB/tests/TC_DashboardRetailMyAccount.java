@@ -22,6 +22,7 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		new RetailHome().clickOnEnquiry().clickOnLoginHistory().clickOnEnquiry()
 		.clickOnTDSEnquiry()
 		.logoutApp();
+
 	}
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
@@ -93,6 +94,14 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 		new RetailHome().eEServiceCLick().clickOnLinkOfAdharC()
 		.eEServiceCLick().clickOnCancel()
 		.logoutApp();
+	}
+	
+	@FrameworkAnnotations(author = { "Kiran" }, categories = { CategoryType.SMOKE })
+	@Test
+	public void accountStatForSpecPeriod(Map<String, String> data) {
+		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+		new RetailHome().clickOnMyAccount().clickOnAccountStatement();
+		
 	}
 
 

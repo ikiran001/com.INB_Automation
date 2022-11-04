@@ -44,4 +44,25 @@ public final class TC_DashboardQL extends BaseTest {
 		.logoutApp();
 	}
 
+	@FrameworkAnnotations(author = { "Kiran" }, categories = { CategoryType.REGRESSION })
+	@Test
+	public void profileLinksClick(Map<String , String> data) {
+		new RetailLogin()
+
+		.loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
+
+		new RetailQuickLinks().clickOnProfileName().clickOnChangeLoginPassCL().clickOnProfileName()
+		.clickOnChangeProfilePassCL().clickOnProfileName().clickOnForgotPassCL()
+		.clickOnProfileName().clickOnMyProfileCL()
+
+		.logoutApp();
+
+
+
+
+	}
+
+
+
+
 }

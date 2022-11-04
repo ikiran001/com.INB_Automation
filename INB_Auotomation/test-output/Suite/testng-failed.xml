@@ -10,6 +10,7 @@
     <classes>
       <class name="com.INB.tests.TC_DashboardQL">
         <methods>
+          <include name="profileLinksMH" invocation-numbers="0"/>
           <include name="quickLinksCheck" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>

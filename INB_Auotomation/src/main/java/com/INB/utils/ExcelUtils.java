@@ -37,7 +37,7 @@ public final class ExcelUtils {
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
 			XSSFSheet sheet=workbook.getSheet(sheetName);
 
-			list=new ArrayList<Map<String,String>>();
+			list=new ArrayList<>();
 			Map<String ,String > map = null;
 
 			int lastRowNum=sheet.getLastRowNum();
@@ -77,7 +77,7 @@ public final class ExcelUtils {
 			throw new NullPointerException("The  value of one of the row or column  is blank in given excel file ");
 		}		
 
-
+		System.out.println(list);
 		return list;
 	}
 
