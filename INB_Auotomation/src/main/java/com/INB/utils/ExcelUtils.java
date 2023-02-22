@@ -43,7 +43,7 @@ public final class ExcelUtils {
 			int lastRowNum=sheet.getLastRowNum();
 			int lastColNum=sheet.getRow(0).getLastCellNum();
 
-			for(int i=1; i<=lastRowNum;i++) {  //for row 
+			for(int i=1; i<=lastRowNum;i++) {  //for row // row values are startign from  rownumber 1 hence i==1
 
 				map=new HashMap<>();  //everytime when rownumgets updated new hashmap will get generated
 

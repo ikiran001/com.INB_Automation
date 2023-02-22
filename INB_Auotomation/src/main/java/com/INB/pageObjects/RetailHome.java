@@ -65,12 +65,14 @@ public final class RetailHome extends BasePage{
 	private final By downloadStat=By.xpath("//*[@id=\"display\"]");
 	private final By accountNumbersTab=By.xpath("//*[@id=\"command\"]/div[1]/div/div/input");
 
-
+   public RetailHome selectAccontNumber() {
+	   getAccountNumber(accountNumbers, transactionFor, "Specified ", downloadStat);
+	   return this;
+   }
 	public RetailHome clickOnAccNumberTab() {
 		click(accountNumbersTab, WaitStrategy.CLICKABLE, "Account Numbers Tab");
 		return this;
 	}
-
 
 	public RetailHome clickOnLoginHistory() {
 		click(loginHistoryClick, WaitStrategy.CLICKABLE, "Login History ");

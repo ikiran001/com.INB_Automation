@@ -84,6 +84,23 @@ public class BasePage {
 		}
 		return this;
 	}
+	
+	public void getAccountNumber(By by , By period , String name ,By downlad) {
+		List<WebElement> list=DriverManager.getDriver().findElements(by);
+		for (int i=0 ; i<=list.size();i++) {
+			
+			System.out.println( list.get(i).getText());
+			if(Objects.nonNull(list)) {
+				list.get(i).click();
+				System.out.println(list.get(i).getText()+" is clicked ");
+				getRequiredElementFromTheList(period, name);
+				click(downlad, WaitStrategy.CLICKABLE, "Download Button");
+			}
+		}
+		
+		
+	}
+	
 
 	
 

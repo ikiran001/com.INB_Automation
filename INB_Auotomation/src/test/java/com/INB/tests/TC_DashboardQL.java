@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import com.INB.annotations.FrameworkAnnotations;
 import com.INB.constants.FrameworkConstants;
 import com.INB.enums.CategoryType;
-import com.INB.pageObjects.RetailHome;
 import com.INB.pageObjects.RetailLogin;
 import com.INB.pageObjects.RetailQuickLinks;
 

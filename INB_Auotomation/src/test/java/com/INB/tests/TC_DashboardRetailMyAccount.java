@@ -47,7 +47,7 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 
 	@FrameworkAnnotations(author={"KIRAN"}, categories = { CategoryType.REGRESSION })
 	@Test
-	public void requestClick(Map<String, String> data) throws Exception {
+	public  void requestClick(Map<String, String> data) throws Exception {
 		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
 		new RetailHome().clickOnRequest().clickOnchequeBookReq().clickOnRequest().clickOnStopRemoveStop().clickOnRequest()
 		.clickOnDepChequeState().clickOnRequest().clickOnsetStopOnCheq().clickOnRequest().clickOnRemoveSTopOnCHeque().clickOnRequest()
@@ -100,7 +100,8 @@ public class TC_DashboardRetailMyAccount extends BaseTest {
 	@Test
 	public void accountStatForSpecPeriod(Map<String, String> data) {
 		new RetailLogin().loginToTheApp(FrameworkConstants.getUserName(data),FrameworkConstants.getPassword(data));
-		new RetailHome().clickOnMyAccount().clickOnAccountStatement();
+		new RetailHome().clickOnMyAccount().clickOnAccountStatement()
+		.clickOnAccNumberTab().selectAccontNumber().logoutApp();
 		
 	}
 

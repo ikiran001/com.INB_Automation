@@ -1,79 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-04T10:47:05 IST" name="Suite" finished-at="2022-11-04T10:49:34 IST" duration-ms="148775">
+  <suite started-at="2022-12-12T11:24:37 IST" name="Suite" finished-at="2022-12-12T11:24:50 IST" duration-ms="12842">
     <groups>
     </groups>
-    <test started-at="2022-11-04T10:47:05 IST" name="Test" finished-at="2022-11-04T10:49:34 IST" duration-ms="148775">
-      <class name="com.INB.tests.TC_DashboardQL">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:48:47 IST" name="setUp" finished-at="2022-11-04T10:48:50 IST" duration-ms="3111" status="PASS">
+    <test started-at="2022-12-12T11:24:37 IST" name="Test" finished-at="2022-12-12T11:24:50 IST" duration-ms="12842">
+      <class name="com.INB.tests.TC_DashboardRetailMyAccount">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-12-12T11:24:38 IST" name="setUp" finished-at="2022-12-12T11:24:43 IST" duration-ms="5164" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@3a627c80]]>
+                <![CDATA[[Ljava.lang.Object;@4c98a6d5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="profileLinksClick(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:48:50 IST" name="profileLinksClick" description="checking for profile links with click method" data-provider="getData" finished-at="2022-11-04T10:49:04 IST" duration-ms="13756" status="PASS">
+        <test-method signature="requestClick(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-12-12T11:24:43 IST" name="requestClick" description="checking Request menu with click  method" data-provider="getData" finished-at="2022-12-12T11:24:49 IST" duration-ms="6044" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Test Case Name=profileLinksClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
+                <![CDATA[{Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- profileLinksClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:49:04 IST" name="tearDown" finished-at="2022-11-04T10:49:05 IST" duration-ms="463" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:49:05 IST" name="setUp" finished-at="2022-11-04T10:49:08 IST" duration-ms="3744" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@49aa766b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="profileLinksMH(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:49:08 IST" name="profileLinksMH" description="checking profileLinks with mouse hover method" data-provider="getData" finished-at="2022-11-04T10:49:14 IST" duration-ms="5661" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=profileLinksMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[unknown error: Element <a href="/OnlineSPCB/userChangeProfilePassword" class=" waves-effect waves-light">...</a> is not clickable at point (102, 20). Other element would receive the click: <img style="max-width: 100% !important;" class="img-fluid" id="my-image" src="/OnlineSPCB/resources/images/LOGO/SPCB_Logo.png" alt="LOGO">
-  (Session info: chrome=107.0.5304.88)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=108.0.5359.99)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19045 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '01CEDHWLAP459', ip: '10.1.71.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+System info: host: '01CEDHWLAP459', ip: '10.1.71.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 107.0.5304.88, webStorageEnabled: true}
-Session ID: 03568eaa877821efe8937171567979e6]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 108.0.5359.99, webStorageEnabled: true}
+Session ID: b6d3f0fc1126971cec1c5a31fb9201f7]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <a href="/OnlineSPCB/userChangeProfilePassword" class=" waves-effect waves-light">...</a> is not clickable at point (102, 20). Other element would receive the click: <img style="max-width: 100% !important;" class="img-fluid" id="my-image" src="/OnlineSPCB/resources/images/LOGO/SPCB_Logo.png" alt="LOGO">
-  (Session info: chrome=107.0.5304.88)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=108.0.5359.99)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19045 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '01CEDHWLAP459', ip: '10.1.71.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+System info: host: '01CEDHWLAP459', ip: '10.1.71.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 107.0.5304.88, webStorageEnabled: true}
-Session ID: 03568eaa877821efe8937171567979e6
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 108.0.5359.99, webStorageEnabled: true}
+Session ID: b6d3f0fc1126971cec1c5a31fb9201f7
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -89,9 +65,9 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at com.INB.pageObjects.BasePage.click(BasePage.java:24)
-at com.INB.pageObjects.RetailQuickLinks.clickOnChangeProfilePass(RetailQuickLinks.java:66)
-at com.INB.tests.TC_DashboardQL.profileLinksMH(TC_DashboardQL.java:41)
+at com.INB.pageObjects.BasePage.clickAction(BasePage.java:53)
+at com.INB.pageObjects.RetailHome.clickOnRequest(RetailHome.java:162)
+at com.INB.tests.TC_DashboardRetailMyAccount.requestClick(TC_DashboardRetailMyAccount.java:52)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,258 +85,11 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- profileLinksMH -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:49:14 IST" name="tearDown" finished-at="2022-11-04T10:49:15 IST" duration-ms="946" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:49:15 IST" name="setUp" finished-at="2022-11-04T10:49:20 IST" duration-ms="4165" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@963176]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="quickLinksCheck(java.util.Map)[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:49:20 IST" name="quickLinksCheck" description="checking dashboard quick links" data-provider="getData" finished-at="2022-11-04T10:49:33 IST" duration-ms="13675" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=quickLinksCheck, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div/div/div[2]/ul/li[1]/a (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div/div/div[2]/ul/li[1]/a (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.INB.factories.ExplicitWaitFactory.performExlpicitWait(ExplicitWaitFactory.java:23)
-at com.INB.pageObjects.BasePage.clickAction(BasePage.java:52)
-at com.INB.pageObjects.RetailQuickLinks.clickOnqlMyAccount(RetailQuickLinks.java:80)
-at com.INB.tests.TC_DashboardQL.quickLinksCheck(TC_DashboardQL.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/section/div/div/div[2]/ul/li[1]/a"}
-  (Session info: chrome=107.0.5304.88)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '01CEDHWLAP459', ip: '10.1.71.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 107.0.5304.88, webStorageEnabled: true}
-Session ID: d6e269ea4e17469f47009ce567a832d3
-*** Element info: {Using=xpath, value=/html/body/section/div/div/div[2]/ul/li[1]/a}
-at jdk.internal.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 19 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quickLinksCheck -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardQL@6283d8b8]" started-at="2022-11-04T10:49:33 IST" name="tearDown" finished-at="2022-11-04T10:49:34 IST" duration-ms="304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.INB.tests.TC_DashboardQL -->
-      <class name="com.INB.tests.TC_DashboardRetailMyAccount">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:06 IST" name="setUp" finished-at="2022-11-04T10:47:11 IST" duration-ms="5176" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@58cec85b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="eServiceClick(java.util.Map)[pri:52, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:11 IST" name="eServiceClick" description="checking E-services menu with click method" data-provider="getData" finished-at="2022-11-04T10:47:20 IST" duration-ms="8828" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=eServiceClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eServiceClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:20 IST" name="tearDown" finished-at="2022-11-04T10:47:21 IST" duration-ms="389" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:21 IST" name="setUp" finished-at="2022-11-04T10:47:24 IST" duration-ms="3521" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@629f066f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="eServiceMH(java.util.Map)[pri:51, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:24 IST" name="eServiceMH" description="checking E-services menu with mouse Hover method" data-provider="getData" finished-at="2022-11-04T10:47:33 IST" duration-ms="8725" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=eServiceMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eServiceMH -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:33 IST" name="tearDown" finished-at="2022-11-04T10:47:34 IST" duration-ms="296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:34 IST" name="setUp" finished-at="2022-11-04T10:47:37 IST" duration-ms="3216" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@1542af63]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="myAccountsClick(java.util.Map)[pri:50, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:37 IST" name="myAccountsClick" description="checking all accounts with click method" data-provider="getData" finished-at="2022-11-04T10:47:51 IST" duration-ms="13673" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=myAccountsClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myAccountsClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:51 IST" name="tearDown" finished-at="2022-11-04T10:47:51 IST" duration-ms="415" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:51 IST" name="setUp" finished-at="2022-11-04T10:47:55 IST" duration-ms="4214" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@ecfbe91]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="myAccountsMH(java.util.Map)[pri:49, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:47:55 IST" name="myAccountsMH" description="checking all accounts with  mouse hover method" data-provider="getData" finished-at="2022-11-04T10:48:07 IST" duration-ms="11249" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=myAccountsMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myAccountsMH -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:48:07 IST" name="tearDown" finished-at="2022-11-04T10:48:07 IST" duration-ms="367" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:48:07 IST" name="setUp" finished-at="2022-11-04T10:48:11 IST" duration-ms="3138" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@20ed3303]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="requestClick(java.util.Map)[pri:53, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:48:11 IST" name="requestClick" description="checking Request menu with click  method" data-provider="getData" finished-at="2022-11-04T10:48:30 IST" duration-ms="19099" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=requestClick, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- requestClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:48:30 IST" name="tearDown" finished-at="2022-11-04T10:48:30 IST" duration-ms="282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:48:30 IST" name="setUp" finished-at="2022-11-04T10:48:34 IST" duration-ms="3210" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@3adbe50f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="requestMH(java.util.Map)[pri:54, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:48:34 IST" name="requestMH" description="checking Request menu with mouse hover method" data-provider="getData" finished-at="2022-11-04T10:48:46 IST" duration-ms="12581" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Test Case Name=requestMH, data1=spcb, Execute=yes, data2=Asdf@123, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- requestMH -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-11-04T10:48:46 IST" name="tearDown" finished-at="2022-11-04T10:48:47 IST" duration-ms="507" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.INB.tests.TC_DashboardRetailMyAccount@22ef9844]" started-at="2022-12-12T11:24:49 IST" name="tearDown" finished-at="2022-12-12T11:24:50 IST" duration-ms="399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

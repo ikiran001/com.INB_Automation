@@ -29,7 +29,7 @@ public final class DataProviderUtils {
 
 	}
 
-	@DataProvider (parallel=false)
+	@DataProvider (parallel=true)
 	public static Object[] getData(Method method) {
 
 		String testname=method.getName();  //testname will save the name of all the testmethods,whatever the test methods are calling this dataprovider
