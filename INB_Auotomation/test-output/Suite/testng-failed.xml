@@ -8,9 +8,16 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
+      <class name="com.INB.tests.TC_LoginRetailUser">
+        <methods>
+          <include name="TC00"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.INB.tests.TC_LoginRetailUser -->
       <class name="com.INB.tests.TC_DashboardRetailMyAccount">
         <methods>
-          <include name="requestClick" invocation-numbers="0"/>
+          <include name="requestClick"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

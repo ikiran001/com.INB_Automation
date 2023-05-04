@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=chrome})">requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=chrome})</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_LoginRetailUser" class="method navigator-link" hash-for-method="TC00({Test Case Name=TC00, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})">TC00({Test Case Name=TC00, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.INB.tests.TC_DashboardRetailMyAccount" class="method navigator-link" hash-for-method="requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})">requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,55 +124,160 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.INB.tests.TC_DashboardRetailMyAccount</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.INB.tests.TC_LoginRetailUser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=chrome})">
-                  </a> <!-- requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=chrome}) -->
-                  <span class="method-name">requestClick</span>
-                  <span class="parameters">({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=108.0.5359.99)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19045 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+                  <a name="TC00({Test Case Name=TC00, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})">
+                  </a> <!-- TC00({Test Case Name=TC00, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge}) -->
+                  <span class="method-name">TC00</span>
+                  <span class="parameters">({Test Case Name=TC00, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 106
+Current browser version is 110.0.1587.57 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\kiran.j\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 108.0.5359.99, webStorageEnabled: true}
-Session ID: b6d3f0fc1126971cec1c5a31fb9201f7
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: driver.version: Driver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF7DCA7F0F2+15282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA1C7F2+1461634]
+	Ordinal0 [0x00007FF7DC63C8A5+641189]
+	Ordinal0 [0x00007FF7DC66AB4F+830287]
+	Ordinal0 [0x00007FF7DC66652E+812334]
+	Ordinal0 [0x00007FF7DC661670+792176]
+	Ordinal0 [0x00007FF7DC69FEA1+1048225]
+	Ordinal0 [0x00007FF7DC69F388+1045384]
+	Ordinal0 [0x00007FF7DC6986F3+1017587]
+	Ordinal0 [0x00007FF7DC66D104+839940]
+	Ordinal0 [0x00007FF7DC66E76F+845679]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC8D8A18+135080]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC8C2878+44552]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC8C57BC+56652]
+	Ordinal0 [0x00007FF7DC72A764+1615716]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA21D59+1483497]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA25C14+1499556]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA25D6D+1499901]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA2D636+1530822]
+	BaseThreadInitThunk [0x00007FF904787614+20]
+	RtlUserThreadStart [0x00007FF9048C26A1+33]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at com.INB.pageObjects.BasePage.clickAction(BasePage.java:53)
-	at com.INB.pageObjects.RetailHome.clickOnRequest(RetailHome.java:162)
-	at com.INB.tests.TC_DashboardRetailMyAccount.requestClick(TC_DashboardRetailMyAccount.java:52)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at com.INB.driver.Driver.initDriver(Driver.java:27)
+	at com.INB.tests.BaseTest.setUp(BaseTest.java:27)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To Login into the application)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.INB.tests.TC_DashboardRetailMyAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})">
+                  </a> <!-- requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge}) -->
+                  <span class="method-name">requestClick</span>
+                  <span class="parameters">({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 106
+Current browser version is 110.0.1587.57 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;01CEDHWLAP459&apos;, ip: &apos;10.1.71.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: driver.version: Driver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF7DCA7F0F2+15282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA1C7F2+1461634]
+	Ordinal0 [0x00007FF7DC63C8A5+641189]
+	Ordinal0 [0x00007FF7DC66AB4F+830287]
+	Ordinal0 [0x00007FF7DC66652E+812334]
+	Ordinal0 [0x00007FF7DC661670+792176]
+	Ordinal0 [0x00007FF7DC69FEA1+1048225]
+	Ordinal0 [0x00007FF7DC69F388+1045384]
+	Ordinal0 [0x00007FF7DC6986F3+1017587]
+	Ordinal0 [0x00007FF7DC66D104+839940]
+	Ordinal0 [0x00007FF7DC66E76F+845679]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC8D8A18+135080]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC8C2878+44552]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC8C57BC+56652]
+	Ordinal0 [0x00007FF7DC72A764+1615716]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA21D59+1483497]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA25C14+1499556]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA25D6D+1499901]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DCA2D636+1530822]
+	BaseThreadInitThunk [0x00007FF904787614+20]
+	RtlUserThreadStart [0x00007FF9048C26A1+33]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at com.INB.driver.Driver.initDriver(Driver.java:27)
+	at com.INB.tests.BaseTest.setUp(BaseTest.java:27)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 18 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (checking Request menu with click  method)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -227,16 +337,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'requestClick')
-data.setCell(0, 2, 'com.INB.tests.TC_DashboardRetailMyAccount')
-data.setCell(0, 3, 6044);
+data.setCell(0, 1, 'TC00')
+data.setCell(0, 2, 'com.INB.tests.TC_LoginRetailUser')
+data.setCell(0, 3, 0);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'requestClick')
+data.setCell(1, 2, 'com.INB.tests.TC_DashboardRetailMyAccount')
+data.setCell(1, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -262,20 +376,37 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.INB.tests.TC_DashboardRetailMyAccount</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.INB.tests.TC_LoginRetailUser</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp([{Test Case Name=requestClick, Execute=yes, data2=Asdf@123, data1=CIF1, Browser=chrome}])</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setUp([{Test Case Name=TC00, Execute=yes, data2=Asdf@123, data1=CIF1, Browser=microedge}])</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=chrome})</span>
-                <span class="method-start">5166 ms</span>
+                <span class="method-name">TC00({Test Case Name=TC00, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})</span>
+                <span class="method-start">6391 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11496 ms</span>
+                <span class="method-start">6466 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.INB.tests.TC_DashboardRetailMyAccount</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setUp([{Test Case Name=requestClick, Execute=yes, data2=Asdf@123, data1=CIF1, Browser=microedge}])</span>
+                <span class="method-start">6480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">requestClick({Test Case Name=requestClick, data1=CIF1, Execute=yes, data2=Asdf@123, Browser=microedge})</span>
+                <span class="method-start">11374 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11388 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
